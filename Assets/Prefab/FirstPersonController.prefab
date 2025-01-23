@@ -286,7 +286,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.85, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7596484691539857205}
@@ -351,7 +351,7 @@ CharacterController:
   m_SlopeLimit: 0
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
+  m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4512627867828008524
 MonoBehaviour:
@@ -367,4 +367,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 1428028241028619078}
   headLookTransform: {fileID: 8757151919093141016}
-  moveSpeed: 3.5
+  maxSpeed: 4
+  moveAccel: 10
