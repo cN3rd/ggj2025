@@ -25,38 +25,32 @@ namespace UHG
             playableDirector.Play();
         }
 
-        public void ChangeTo2D() => SwitchTo2DRenderer();
+        public void TransitionInEnd() => TransitionIn();
 
-        private void SwitchTo2DRenderer()
+        private void TransitionIn()
         {
+            // enter dialog mode
             playableDirector.playableAsset = timelineIn;
-            Debug.Log("change to 2D");
-            cameraData.SetRenderer(1);
-            eyepeekCamera.Priority = -10;
-            camera2D.Priority = 100;
+            Debug.Log("Transition In");
             StartCoroutine(WaitAndTransitionOut());
         }
 
-        private void SwitchTo3DRenderer()
+        private void TransitionOut()
         {
             playableDirector.playableAsset = timelineOut;
-            Debug.Log("change to 3D");
-            camera2D.Priority = -100;
+            Debug.Log("Transition Out");
             eyepeekCamera.Priority = -10;
-            cameraData.SetRenderer(0);
-            gameController.DisablePlayerControls();
         }
 
         private IEnumerator WaitAndTransitionOut() // DEBUG | CHANGE TO 2D EXIT FUNC
         {
             yield return new WaitForSeconds(2);
-
             yield return DeactivateEyepeekCamera();
         }
 
         private IEnumerator DeactivateEyepeekCamera()
         {
-            SwitchTo3DRenderer();
+            TransitionOut();
             playableDirector.Play();
             while (playableDirector.state == PlayState.Playing)
             {
