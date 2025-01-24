@@ -7,16 +7,8 @@ namespace UHG
         [SerializeField] private FirstPersonController player;
         [SerializeField] private TransitionDirector transitionDirector;
 
+        public void DisablePlayerControls() => player.enabled = false;
 
-
-
-        public void disablePlayerControls()
-        {
-            player.enabled = false;
-        }
-        public void enablePlayerControls()
-        {
-            player.enabled = true;
-        }
+        public void EnablePlayerControls() => player.enabled = true;
     }
 }

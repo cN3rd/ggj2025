@@ -1,10 +1,7 @@
-using System.Globalization;
-using Unity.Burst;
-using Unity.Mathematics;
-using UnityEngine;
-using UnityEngine.Playables;
 using System.Collections;
 using Unity.Cinemachine;
+using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Timeline;
 
@@ -20,40 +17,47 @@ namespace UHG
         [SerializeField] private TimelineAsset timelineIn;
         [SerializeField] private TimelineAsset timelineOut;
         [SerializeField] private UniversalAdditionalCameraData cameraData;
-        
-        public void activateEyepeekCamera()
+
+        public void ActivateEyepeekCamera()
         {
             eyepeekCamera.Priority = 100;
-            gameController.disablePlayerControls();
+            gameController.DisablePlayerControls();
             playableDirector.Play();
         }
-        
-        public void changeTo2D()
+
+        public void ChangeTo2D() => SwitchTo2DRenderer();
+
+        private void SwitchTo2DRenderer()
         {
             playableDirector.playableAsset = timelineIn;
             Debug.Log("change to 2D");
             cameraData.SetRenderer(1);
             eyepeekCamera.Priority = -10;
             camera2D.Priority = 100;
-            StartCoroutine(waitAndTransitionOut());
+            StartCoroutine(WaitAndTransitionOut());
         }
-        
-        public void changeTo3D()
+
+        private void SwitchTo3DRenderer()
         {
             playableDirector.playableAsset = timelineOut;
             Debug.Log("change to 3D");
             camera2D.Priority = -100;
             eyepeekCamera.Priority = -10;
             cameraData.SetRenderer(0);
-            gameController.disablePlayerControls();
+            gameController.DisablePlayerControls();
         }
-        
-        public IEnumerator waitAndTransitionOut() // DEBUG | CHANGE TO 2D EXIT FUNC
+
+        private IEnumerator WaitAndTransitionOut() // DEBUG | CHANGE TO 2D EXIT FUNC
         {
             yield return new WaitForSeconds(2);
-            changeTo3D();
-            playableDirector.Play();
 
+            yield return DeactivateEyepeekCamera();
+        }
+
+        private IEnumerator DeactivateEyepeekCamera()
+        {
+            SwitchTo3DRenderer();
+            playableDirector.Play();
             while (playableDirector.state == PlayState.Playing)
             {
                 yield return null;
@@ -61,6 +65,5 @@ namespace UHG
 
             playableDirector.playableAsset = timelineIn;
         }
-
     }
 }
