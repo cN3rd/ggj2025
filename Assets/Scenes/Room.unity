@@ -1863,6 +1863,7 @@ MonoBehaviour:
   playableDirector: {fileID: 1776986029}
   timelineIn: {fileID: 11400000, guid: 0b087b0258062484da25c8f79eee849e, type: 2}
   timelineOut: {fileID: 11400000, guid: 07034ac4630ab4b3f921cdf52113aaf4, type: 2}
+  cameraData: {fileID: 480212115}
 --- !u!1 &1887182907
 GameObject:
   m_ObjectHideFlags: 0
