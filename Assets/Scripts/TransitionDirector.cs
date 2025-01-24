@@ -8,14 +8,14 @@ namespace UHG
     [RequireComponent(typeof(PlayableGraph))]
     public class TransitionDirector : MonoBehaviour
     {
-        [SerializeField] private PlayableGraph playableDirector;
+        [SerializeField] private Playable playableDirector;
         [SerializeField] private GameObject virtCamera;
         private bool stratedPlaying = false;
 
-        void Start()
-        {
-            
-        }
+        // void Start()
+        // {
+        //     playableDirector = gameObject.GetComponent<Playable>();
+        // }
         public void activateVirtCamera()
         {
             virtCamera.SetActive(true);
@@ -23,8 +23,8 @@ namespace UHG
         }
         void Update()
         {
-            if (stratedPlaying && !playableDirector.IsPlaying())
-                Debug.Log("Change Scene");
+            // if (stratedPlaying && !playableDirector.IsPlaying())
+            //     Debug.Log("Change Scene");
         }
     }
 }

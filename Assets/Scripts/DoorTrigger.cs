@@ -14,6 +14,7 @@ public class DoorTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Enter DoorTrigger" + other.name);
         if (other.CompareTag(targetTag))
         {
             gameObject.GetComponentInParent<TransitionDirector>().activateVirtCamera();
@@ -23,7 +24,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.CompareTag(targetTag))
         {
-            Debug.Log("Body entered trigger " + other.gameObject.tag);
+            Debug.Log("Body exited trigger " + other.gameObject.tag);
 
         }
     }    
