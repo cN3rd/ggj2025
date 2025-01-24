@@ -19,7 +19,7 @@ namespace UHG
         [SerializeField] private PlayableDirector playableDirector;
         [SerializeField] private TimelineAsset timelineIn;
         [SerializeField] private TimelineAsset timelineOut;
-        
+        [SerializeField] private UniversalAdditionalCameraData cameraData;
         
         public void activateEyepeekCamera()
         {
@@ -27,23 +27,24 @@ namespace UHG
             gameController.disablePlayerControls();
             playableDirector.Play();
         }
+        
         public void changeTo2D()
         {
             playableDirector.playableAsset = timelineIn;
             Debug.Log("change to 2D");
-            Camera.main.GetComponent<UniversalAdditionalCameraData>().SetRenderer(1);
+            cameraData.SetRenderer(1);
             eyepeekCamera.Priority = -10;
             camera2D.Priority = 100;
             StartCoroutine(waitAndTransitionOut());
-            
         }
+        
         public void changeTo3D()
         {
             playableDirector.playableAsset = timelineOut;
             Debug.Log("change to 3D");
             camera2D.Priority = -100;
             eyepeekCamera.Priority = -10;
-            Camera.main.GetComponent<UniversalAdditionalCameraData>().SetRenderer(0);
+            cameraData.SetRenderer(0);
             gameController.disablePlayerControls();
         }
         
@@ -52,6 +53,13 @@ namespace UHG
             yield return new WaitForSeconds(2);
             changeTo3D();
             playableDirector.Play();
+
+            while (playableDirector.state == PlayState.Playing)
+            {
+                yield return null;
+            }
+
+            playableDirector.playableAsset = timelineIn;
         }
 
     }
