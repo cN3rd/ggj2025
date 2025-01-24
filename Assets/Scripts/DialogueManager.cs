@@ -12,8 +12,8 @@ namespace UHG
         public async UniTask PlayDialogue(DialogueData data)
         {
             if (data.dialogueSegments.Length == 0) return;
-            displayer.SetSpeakerName(data.dialogueSegments[0].speaker);
             
+            displayer.SetSpeakerName(data.dialogueSegments[0].speaker);
             if (!displayer.IsVisible()) await displayer.MakeVisible();
             
             // scroll through dialogue
@@ -29,33 +29,18 @@ namespace UHG
 
         public async void Start()
         {
-            DialogueData data = new()
+            var data = ScriptableObject.CreateInstance<DialogueData>();
+            
+            data.dialogueSegments = new[]
             {
-                dialogueSegments = new[]
-                {
-                    new DialogueSegment { speaker = "Mark", text = "Hello Shlomo" },
-                    new DialogueSegment { speaker = "Shlomo", text = "Hello Mark" },
-                    new DialogueSegment { speaker = "Tommy", text = "Hello Mark, hello Shlomo" },
-                    new DialogueSegment { speaker = "Mark", text = "Fuck you all, i'm going to smoke" },
-                },
-                characterSprite = null
+                new DialogueSegment { speaker = "Mark", text = "Hello Shlomo" },
+                new DialogueSegment { speaker = "Shlomo", text = "Hello Mark" },
+                new DialogueSegment { speaker = "Tommy", text = "Hello Mark, hello Shlomo" },
+                new DialogueSegment { speaker = "Mark", text = "Fuck you all, i'm going to smoke" },
             };
+            data.characterSprite = null;
             
             await PlayDialogue(data);
         }
-    }
-
-    [Serializable]
-    public class DialogueData
-    {
-        public DialogueSegment[] dialogueSegments;
-        public Sprite characterSprite;
-    }
-
-    [Serializable]
-    public class DialogueSegment
-    {
-        public string speaker;
-        public string text;
     }
 }
