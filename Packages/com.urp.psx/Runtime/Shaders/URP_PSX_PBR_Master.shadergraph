@@ -4,6 +4,9 @@
     "m_ObjectId": "f76a43069ac643418192b7f51e223c77",
     "m_Properties": [
         {
+            "m_Id": "c6cc593a0f504eca921338ff9663bc92"
+        },
+        {
             "m_Id": "2a9c51f2b3c8888a84231a06afe16d44"
         },
         {
@@ -57,6 +60,15 @@
     "m_CategoryData": [
         {
             "m_Id": "846a71426b1c4de689eb4121e3195c7d"
+        },
+        {
+            "m_Id": "a06adf53e79e425bb5cbc1f52e11e023"
+        },
+        {
+            "m_Id": "3db429ab3155432fb33481800c53e5f5"
+        },
+        {
+            "m_Id": "8dd3c7c8fb6c4b9899ab7579c323fbc2"
         }
     ],
     "m_Nodes": [
@@ -1696,7 +1708,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "038deb4324c71b82ad1e8da75926ba2f",
     "m_Id": 0,
-    "m_DisplayName": "MainTex",
+    "m_DisplayName": "Base Map",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2316,7 +2328,7 @@
     "m_ObjectId": "163095e37d5b4845811276c3c08a45d7",
     "m_Title": "Texture Sampling",
     "m_Position": {
-        "x": -314.39990234375,
+        "x": -314.4000244140625,
         "y": 903.2000122070313
     }
 }
@@ -3411,7 +3423,7 @@
     "m_Title": "Color Precision",
     "m_Position": {
         "x": 268.800048828125,
-        "y": 652.7999877929688
+        "y": 652.8001098632813
     }
 }
 
@@ -3659,6 +3671,24 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "SurfaceDescription.Occlusion"
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "3db429ab3155432fb33481800c53e5f5",
+    "m_Name": "Lit",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "2a9c51f2b3c8888a84231a06afe16d44"
+        },
+        {
+            "m_Id": "a83dd6bbcd24fa82a99cd73f57b47c05"
+        },
+        {
+            "m_Id": "5ee8b1ed2f78f28bb98ffe5668309e0c"
+        }
+    ]
 }
 
 {
@@ -4260,11 +4290,11 @@
     "m_Guid": {
         "m_GuidSerialized": "bd874fe0-51d7-4210-94db-323e579ea432"
     },
-    "m_Name": "MainTex",
+    "m_Name": "Base Map",
     "m_DefaultRefNameVersion": 0,
     "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_4450AB74",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_BaseMap",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -4425,8 +4455,8 @@
     "m_ObjectId": "54c9b4db117640d88c810254761c0769",
     "m_Title": "Skybox Color",
     "m_Position": {
-        "x": 2512.7998046875,
-        "y": 1356.7998046875
+        "x": 2512.80029296875,
+        "y": 1356.7996826171875
     }
 }
 
@@ -4459,7 +4489,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "5558db0b257be783b9278881222e0cf8",
     "m_Id": 0,
-    "m_DisplayName": "MainTex",
+    "m_DisplayName": "Base Map",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -5466,7 +5496,7 @@
     "m_ObjectId": "710a06698a86418482a89fa7b834d9f7",
     "m_Title": "Vertex Snapping",
     "m_Position": {
-        "x": 504.0,
+        "x": 504.000244140625,
         "y": -417.5999755859375
     }
 }
@@ -5672,7 +5702,7 @@
     "m_ObjectId": "77e3cb953a2441c6a7be9cccb8ed4a49",
     "m_Title": "UNITY_Z_0_FAR_FROM_CLIPSPACE",
     "m_Position": {
-        "x": -2603.2001953125,
+        "x": -2603.199951171875,
         "y": -631.2000122070313
     }
 }
@@ -5860,56 +5890,7 @@
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "846a71426b1c4de689eb4121e3195c7d",
     "m_Name": "",
-    "m_ChildObjectList": [
-        {
-            "m_Id": "2a9c51f2b3c8888a84231a06afe16d44"
-        },
-        {
-            "m_Id": "a83dd6bbcd24fa82a99cd73f57b47c05"
-        },
-        {
-            "m_Id": "deb600fa14b7dc85a6bd541bd701d235"
-        },
-        {
-            "m_Id": "09b54b4441626e89b42a6b03b896502a"
-        },
-        {
-            "m_Id": "73cdf89ce8fee9808aea16bfc15a0f7a"
-        },
-        {
-            "m_Id": "0fe77e5bdfd2af8f86285199fd175feb"
-        },
-        {
-            "m_Id": "816810d43b5d30849857c1cd0d2b74c9"
-        },
-        {
-            "m_Id": "836dd2904e007383b051376c32083d37"
-        },
-        {
-            "m_Id": "9c727aaebe21708bae1452d2b996cfb2"
-        },
-        {
-            "m_Id": "9ec59b890f535487a441e4f80b4ade9c"
-        },
-        {
-            "m_Id": "50d114ea7973dc8d8b2ed54982dea3b2"
-        },
-        {
-            "m_Id": "0124fca9fc539d87b1ff2b4c6a091f7c"
-        },
-        {
-            "m_Id": "c3f3133df7e87d8a9e5d16715067c284"
-        },
-        {
-            "m_Id": "215239adf217788a9083600cdd320719"
-        },
-        {
-            "m_Id": "5ee8b1ed2f78f28bb98ffe5668309e0c"
-        },
-        {
-            "m_Id": "01254fc095b24f99b0a20d735f1026d5"
-        }
-    ]
+    "m_ChildObjectList": []
 }
 
 {
@@ -6153,7 +6134,7 @@
     "m_ObjectId": "8cf16f3b7cfc4473a9acd11a46188d78",
     "m_Title": "Affine Mapping",
     "m_Position": {
-        "x": -2247.2001953125,
+        "x": -2247.199951171875,
         "y": 536.7999877929688
     }
 }
@@ -6192,6 +6173,45 @@
     "m_Property": {
         "m_Id": "215239adf217788a9083600cdd320719"
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "8dd3c7c8fb6c4b9899ab7579c323fbc2",
+    "m_Name": "Deformation",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "deb600fa14b7dc85a6bd541bd701d235"
+        },
+        {
+            "m_Id": "09b54b4441626e89b42a6b03b896502a"
+        },
+        {
+            "m_Id": "9ec59b890f535487a441e4f80b4ade9c"
+        },
+        {
+            "m_Id": "0fe77e5bdfd2af8f86285199fd175feb"
+        },
+        {
+            "m_Id": "9c727aaebe21708bae1452d2b996cfb2"
+        },
+        {
+            "m_Id": "816810d43b5d30849857c1cd0d2b74c9"
+        },
+        {
+            "m_Id": "01254fc095b24f99b0a20d735f1026d5"
+        },
+        {
+            "m_Id": "c3f3133df7e87d8a9e5d16715067c284"
+        },
+        {
+            "m_Id": "73cdf89ce8fee9808aea16bfc15a0f7a"
+        },
+        {
+            "m_Id": "836dd2904e007383b051376c32083d37"
+        }
+    ]
 }
 
 {
@@ -6832,6 +6852,27 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "a06adf53e79e425bb5cbc1f52e11e023",
+    "m_Name": "Base Color",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "50d114ea7973dc8d8b2ed54982dea3b2"
+        },
+        {
+            "m_Id": "c6cc593a0f504eca921338ff9663bc92"
+        },
+        {
+            "m_Id": "215239adf217788a9083600cdd320719"
+        },
+        {
+            "m_Id": "0124fca9fc539d87b1ff2b4c6a091f7c"
+        }
+    ]
 }
 
 {
@@ -8037,6 +8078,36 @@
 }
 
 {
+    "m_SGVersion": 3,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
+    "m_ObjectId": "c6cc593a0f504eca921338ff9663bc92",
+    "m_Guid": {
+        "m_GuidSerialized": "bc2ebbd6-7043-4fc7-aab6-185dcf48e155"
+    },
+    "m_Name": "Color",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Color",
+    "m_DefaultReferenceName": "_Color",
+    "m_OverrideReferenceName": "_BaseColor",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    },
+    "isMainColor": false,
+    "m_ColorMode": 0
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.UVNode",
     "m_ObjectId": "c6d93f657c66ef8e9c6f9f1cf6d2012d",
@@ -8199,7 +8270,7 @@
     "m_ObjectId": "cb59536d9da847f19e551cbd8d729765",
     "m_Title": "Specular",
     "m_Position": {
-        "x": 1344.800048828125,
+        "x": 1344.7998046875,
         "y": 1382.39990234375
     }
 }
@@ -8480,8 +8551,8 @@
     "m_ObjectId": "d4c377a597e94a7c8b9eea7a9224ee02",
     "m_Title": "Diffuse",
     "m_Position": {
-        "x": 1676.0,
-        "y": 944.7999877929688
+        "x": 1676.000244140625,
+        "y": 944.8001098632813
     }
 }
 
@@ -9223,8 +9294,8 @@
     "m_ObjectId": "ece1d9454d1a446cbc9b6d3790b30553",
     "m_Title": "Not Using Camera or Vertex Jitter",
     "m_Position": {
-        "x": 1633.599853515625,
-        "y": 438.4000244140625
+        "x": 1633.60009765625,
+        "y": 438.40008544921877
     }
 }
 
@@ -9687,7 +9758,7 @@
     "m_Title": "Using CameraClipping",
     "m_Position": {
         "x": -165.5999755859375,
-        "y": -195.20001220703126
+        "y": -195.1999969482422
     }
 }
 
