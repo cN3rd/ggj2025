@@ -1,46 +1,41 @@
-using System;
 using Cysharp.Threading.Tasks;
 using LitMotion;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace UHG
 {
     public class DialogueManager : MonoBehaviour
     {
+        [FormerlySerializedAs("gameController")] [SerializeField] private InputManager inputManager;
         [SerializeField] private DialogueDisplayer displayer;
-        
+
         public async UniTask PlayDialogue(DialogueData data)
         {
             if (data.dialogueSegments.Length == 0) return;
-            
+
+            inputManager.DisablePlayerControls();
+            inputManager.DisableMaskMakingControls();
+            inputManager.EnableVNControls();
+
             displayer.SetSpeakerName(data.dialogueSegments[0].speaker);
             if (!displayer.IsVisible()) await displayer.MakeVisible();
-            
+
             // scroll through dialogue
-            foreach (var dialogueSegment in data.dialogueSegments)
+            foreach (DialogueSegment dialogueSegment in data.dialogueSegments)
             {
-                var dialogueDisplayMotion = displayer.DisplayDialogueLine(dialogueSegment.speaker, dialogueSegment.text);
+                MotionHandle dialogueDisplayMotion =
+                    displayer.DisplayDialogueLine(dialogueSegment.speaker, dialogueSegment.text);
+
                 await dialogueDisplayMotion.ToAwaitable();
                 await UniTask.WaitForSeconds(3);
             }
 
             await displayer.MakeInvisible();
-        }
 
-        public async void Start()
-        {
-            var data = ScriptableObject.CreateInstance<DialogueData>();
-            
-            data.dialogueSegments = new[]
-            {
-                new DialogueSegment { speaker = "Mark", text = "Hello Shlomo" },
-                new DialogueSegment { speaker = "Shlomo", text = "Hello Mark" },
-                new DialogueSegment { speaker = "Tommy", text = "Hello Mark, hello Shlomo" },
-                new DialogueSegment { speaker = "Mark", text = "Fuck you all, i'm going to smoke" },
-            };
-            data.characterSprite = null;
-            
-            await PlayDialogue(data);
+            inputManager.DisableVNControls();
+            inputManager.DisableMaskMakingControls();
+            inputManager.EnablePlayerControls();
         }
     }
 }
