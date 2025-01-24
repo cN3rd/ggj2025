@@ -1257,7 +1257,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  CustomBlends: {fileID: 11400000, guid: 22a34cf6f9ddd41a99ef505102fb3465, type: 2}
+  CustomBlends: {fileID: 0}
 --- !u!114 &480212115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,14 +1390,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: 27b8032cfc9ce4f17b28a527be4f4e40, type: 2}
     - {fileID: 11400000, guid: 59eed7ef333864d35adbaa3809187221, type: 2}
+    - {fileID: 11400000, guid: 27b8032cfc9ce4f17b28a527be4f4e40, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1776986031}
-          m_TargetAssemblyTypeName: UHG.TransitionDirector, JamGame
-          m_MethodName: ChangeTo2D
+        - m_Target: {fileID: 433065673}
+          m_TargetAssemblyTypeName: UHG.GameController, JamGame
+          m_MethodName: EnablePlayerControls
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1409,9 +1409,9 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 433065673}
-          m_TargetAssemblyTypeName: UHG.GameController, JamGame
-          m_MethodName: EnablePlayerControls
+        - m_Target: {fileID: 1776986031}
+          m_TargetAssemblyTypeName: UHG.TransitionDirector, JamGame
+          m_MethodName: TransitionInEnd
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3048,7 +3048,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 12.5
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
