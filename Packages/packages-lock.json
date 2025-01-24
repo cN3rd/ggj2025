@@ -26,6 +26,12 @@
         "com.unity.localization": "1.0.0"
       }
     },
+    "com.cysharp.unitask": {
+      "version": "file:com.cysharp.unitask",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.singularitygroup.hotreload": {
       "version": "file:com.singularitygroup.hotreload",
       "depth": 0,
