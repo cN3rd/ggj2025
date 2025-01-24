@@ -1,30 +1,48 @@
+using System.Globalization;
 using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Playables;
+using System.Collections;
+using Unity.Cinemachine;
+using UnityEngine.Rendering.Universal;
+
 
 namespace UHG
 {
-    [RequireComponent(typeof(PlayableGraph))]
+    [RequireComponent(typeof(PlayableDirector))]
     public class TransitionDirector : MonoBehaviour
     {
-        [SerializeField] private Playable playableDirector;
-        [SerializeField] private GameObject virtCamera;
-        private bool stratedPlaying = false;
+        [SerializeField] private GameController gameController;
+        [SerializeField] private CinemachineCamera eyepeekCamera;
+        [SerializeField] private CinemachineCamera camera2D;
 
-        // void Start()
+        [SerializeField] private PlayableDirector _playableDirector;
+        
+        public void activateEyepeekCamera()
+        {
+            eyepeekCamera.Priority = 100;
+            gameController.disablePlayerControls();
+            _playableDirector.Play();
+            // StartCoroutine(TransitionInCoroutine());
+        }
+
+        // public IEnumerator TransitionInCoroutine()
         // {
-        //     playableDirector = gameObject.GetComponent<Playable>();
+        //     _playableDirector.Play();
+        //     while (_playableDirector.state == PlayState.Playing)
+        //     {
+        //         yield return null;
+        //     }
         // }
-        public void activateVirtCamera()
+        public void changeTo2D()
         {
-            virtCamera.SetActive(true);
-            stratedPlaying = true;
+            Debug.Log("change to 2D");
+            Camera.main.GetComponent<UniversalAdditionalCameraData>().SetRenderer(1);
+            eyepeekCamera.Priority = -10;
+            camera2D.Priority = 100;
         }
-        void Update()
-        {
-            // if (stratedPlaying && !playableDirector.IsPlaying())
-            //     Debug.Log("Change Scene");
-        }
+
+
     }
 }

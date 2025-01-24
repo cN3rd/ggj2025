@@ -5,19 +5,15 @@ using UnityEngine;
 public class DoorTrigger : MonoBehaviour
 {
     [SerializeField] private string targetTag = "Player";
-    //[SerializeField] private string componentTypeName = "Player";
-
-
-    void Start()
-    {
-        Debug.Log("Start DoorTrigger");
-    }
+    [SerializeField] private TransitionDirector transitionDirector;
+    
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Enter DoorTrigger" + other.name);
         if (other.CompareTag(targetTag))
         {
-            gameObject.GetComponentInParent<TransitionDirector>().activateVirtCamera();
+            Debug.Log("Body entered trigger " + other.gameObject.tag);
+            transitionDirector.activateEyepeekCamera();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -25,7 +21,6 @@ public class DoorTrigger : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             Debug.Log("Body exited trigger " + other.gameObject.tag);
-
         }
     }    
 }
