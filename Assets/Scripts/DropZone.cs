@@ -5,7 +5,7 @@ public class DropZone : MonoBehaviour
     [SerializeField] private Transform anchorOrigin;
     [SerializeField] private ElementType elementType;
     [SerializeField] private MaskDraggableElement currentElement;
-    [SerializeField] private MaskScript mask;
+    [SerializeField] private PresentationMaskScript mask;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -32,6 +32,6 @@ public class DropZone : MonoBehaviour
             currentElement.ReturnToOriginalParent();
         currentElement = element;
         element.transform.SetParent(transform);
-        // mask.SetElement(element);
+        mask.SetElement(element);
     }
 }

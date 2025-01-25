@@ -7,11 +7,31 @@ public class PresentationMaskScript : MonoBehaviour
     [SerializeField] private Transform mouthAnchor;
     [SerializeField] private Transform decorationsAnchor;
     
-    public void FillMask(MaskScript mask)
+    public void SetElement(MaskDraggableElement element)
     {
-        GameObject.Instantiate(mask.GetEyebrows().gameObject, browAnchor.position, browAnchor.rotation, browAnchor.transform);
-        GameObject.Instantiate(mask.GetCharacteristics().gameObject, characteristicsAnchor.position, characteristicsAnchor.rotation, characteristicsAnchor.transform);
-        GameObject.Instantiate(mask.GetMouth().gameObject, mouthAnchor.position, mouthAnchor.rotation, mouthAnchor.transform);
-        GameObject.Instantiate(mask.GetDecorations().gameObject, decorationsAnchor.position, decorationsAnchor.rotation, decorationsAnchor.transform);
+        switch (element.GetElementType())
+        {
+            case ElementType.Eyebrows:
+                if (browAnchor.childCount > 0)
+                    Destroy(browAnchor.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, browAnchor.position, browAnchor.rotation, browAnchor.transform);
+                break;
+            case ElementType.Characteristics:
+                if (characteristicsAnchor.childCount > 0)
+                    Destroy(characteristicsAnchor.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, characteristicsAnchor.position, characteristicsAnchor.rotation, characteristicsAnchor.transform);
+                break;
+            case ElementType.Mouth:
+                if (mouthAnchor.childCount > 0)
+                    Destroy(mouthAnchor.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, mouthAnchor.position, mouthAnchor.rotation, mouthAnchor.transform);
+                break;
+            case ElementType.Decorations:
+                if (decorationsAnchor.childCount > 0)
+                    Destroy(decorationsAnchor.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, decorationsAnchor.position, decorationsAnchor.rotation, decorationsAnchor.transform);
+                break;
+        }
+
     }
 }
