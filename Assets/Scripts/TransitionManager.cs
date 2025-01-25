@@ -16,7 +16,8 @@ namespace UHG
         [SerializeField] private TimelineAsset timelineInCraft;
         [SerializeField] private TimelineAsset timelineOutPeek;
         [SerializeField] private TimelineAsset timelineOutCraft;
-        [SerializeField] private TimelineAsset newspaperCutscene;
+        [SerializeField] private TimelineAsset newsCutscene;
+        [SerializeField] private TimelineAsset bedCutscene;
         [SerializeField] private UniversalAdditionalCameraData cameraData; // its needed for VFX?
         private GameObject _targetCamera;
         private int mute_index;
@@ -25,12 +26,21 @@ namespace UHG
         public void TransitionToTargetCamera(GameObject target) //CHANGE TO SWITCH
         {
             _targetCamera = target;
-            if (_targetCamera.name == "EyepeekCamera")
-                playableDirector.playableAsset = timelineInPeek;
-            else if(_targetCamera.name == "Craft Table Camera")
-                playableDirector.playableAsset = timelineInCraft;
-            else
-                playableDirector.playableAsset = newspaperCutscene;
+            switch (_targetCamera.name)
+            {
+                case "EyepeekCamera":
+                    playableDirector.playableAsset = timelineInPeek;
+                    break;
+                case "Craft Table Camera":
+                    playableDirector.playableAsset = timelineInCraft;
+                    break;
+                case "NewsCutsceneCamera":
+                    playableDirector.playableAsset = newsCutscene;
+                    break;
+                case "BedCutsceneCamera":
+                    playableDirector.playableAsset = bedCutscene;
+                    break;
+            }
             target.SetActive(true);
             playableDirector.Play();
             // timelineIn.GetRootTrack(mute_index).muted = false;

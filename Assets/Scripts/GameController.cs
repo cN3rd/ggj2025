@@ -22,5 +22,6 @@ namespace UHG
 
         public void EnableMaskMakingControls() => _input.Maskmaking.Enable();
         public void DisableMaskMakingControls() => _input.Maskmaking.Disable();
+        public void EndDay() { }
     }
 }
