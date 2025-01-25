@@ -3,24 +3,23 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Serialization;
 using UnityEngine.Timeline;
 
 namespace UHG
 {
-    [RequireComponent(typeof(PlayableDirector))]
-    public class TransitionDirector : MonoBehaviour
+    public class InOutTransitioner : MonoBehaviour
     {
         [SerializeField] private GameController gameController;
-        [SerializeField] private CinemachineCamera eyepeekCamera;
-        [SerializeField] private CinemachineCamera camera2D;
+        [SerializeField] private CinemachineCamera targetCamera;
         [SerializeField] private PlayableDirector playableDirector;
         [SerializeField] private TimelineAsset timelineIn;
         [SerializeField] private TimelineAsset timelineOut;
         [SerializeField] private UniversalAdditionalCameraData cameraData;
 
-        public void ActivateEyepeekCamera()
+        public void ActivateTargetCamera()
         {
-            eyepeekCamera.Priority = 100;
+            targetCamera.Priority = 100;
             gameController.DisablePlayerControls();
             playableDirector.Play();
         }
@@ -39,17 +38,18 @@ namespace UHG
         {
             playableDirector.playableAsset = timelineOut;
             Debug.Log("Transition Out");
-            eyepeekCamera.Priority = -10;
+            targetCamera.Priority = -10;
         }
 
         private IEnumerator WaitAndTransitionOut() // DEBUG | CHANGE TO 2D EXIT FUNC
         {
             yield return new WaitForSeconds(2);
-            yield return DeactivateEyepeekCamera();
+            yield return DeactivateTargetCamera();
         }
 
-        private IEnumerator DeactivateEyepeekCamera()
+        public IEnumerator DeactivateTargetCamera()
         {
+            Debug.Log("Deactivate Target Camera");
             TransitionOut();
             playableDirector.Play();
             while (playableDirector.state == PlayState.Playing)

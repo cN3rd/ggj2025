@@ -4,13 +4,14 @@ public class DropZone : MonoBehaviour
 {
     [SerializeField] private Transform anchorOrigin;
     [SerializeField] private ElementType elementType;
-    [SerializeField] private Draggable currentElement;
+    [SerializeField] private MaskDraggableElement currentElement;
+    [SerializeField] private MaskScript mask;
     
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Droppable"))
         {
-            Draggable drag = other.GetComponent<Draggable>();
+            MaskDraggableElement drag = other.GetComponent<MaskDraggableElement>();
             if (drag.GetElementType() == elementType)
                 drag.SetAnchor(anchorOrigin.position); // saves position while dragging over
         }
@@ -19,11 +20,11 @@ public class DropZone : MonoBehaviour
     {
         if (other.CompareTag("Droppable"))
         {
-            other.GetComponent<Draggable>().RemoveAnchor();
+            other.GetComponent<MaskDraggableElement>().RemoveAnchor();
         }
     }
     
-    public void AddElementToMask(Draggable element) // sets element on to mask on mouseUp
+    public void AddElementToMask(MaskDraggableElement element) // sets element on to mask on mouseUp
     {
         if (elementType != element.GetElementType()) return;
         
@@ -31,5 +32,6 @@ public class DropZone : MonoBehaviour
             currentElement.ReturnToOriginalParent();
         currentElement = element;
         element.transform.SetParent(transform);
+        mask.SetElement(element);
     }
 }

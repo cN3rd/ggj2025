@@ -1,10 +1,11 @@
 using UHG;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class DoorTrigger : MonoBehaviour
+public class TransitionTrigger : MonoBehaviour
 {
     [SerializeField] private string targetTag = "Player";
-    [SerializeField] private TransitionDirector transitionDirector;
+    [FormerlySerializedAs("transitionDirector")] [SerializeField] private InOutTransitioner inOutTransitioner;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,7 +13,7 @@ public class DoorTrigger : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             Debug.Log("Body entered trigger " + other.gameObject.tag);
-            transitionDirector.ActivateEyepeekCamera();
+            inOutTransitioner.ActivateTargetCamera();
         }
     }
 

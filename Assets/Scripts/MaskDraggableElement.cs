@@ -11,7 +11,7 @@ public enum ElementType
     Decorations
 }
 
-public class Draggable : MonoBehaviour
+public class MaskDraggableElement : MonoBehaviour
 {
     [SerializeField] private ElementType elementType = 0;
     [SerializeField] private DropZone dropZone;
