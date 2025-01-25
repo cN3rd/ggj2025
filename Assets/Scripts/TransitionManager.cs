@@ -16,6 +16,7 @@ namespace UHG
         [SerializeField] private TimelineAsset timelineInCraft;
         [SerializeField] private TimelineAsset timelineOutPeek;
         [SerializeField] private TimelineAsset timelineOutCraft;
+        [SerializeField] private TimelineAsset newspaperCutscene;
         [SerializeField] private UniversalAdditionalCameraData cameraData; // its needed for VFX?
         private GameObject _targetCamera;
         private int mute_index;
