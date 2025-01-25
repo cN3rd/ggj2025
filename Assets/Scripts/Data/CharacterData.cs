@@ -19,6 +19,7 @@ namespace Data
     public class CharacterData : ScriptableObject
     {
         public Sprite characterSprite;
+        public int characterDay;
         public CharacterAffinity[] affinities;
         
         [Header("Dialogues")]
