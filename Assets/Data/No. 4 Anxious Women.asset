@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4e362323a84bf9b8f481b53eca2a62, type: 3}
+  m_Name: No. 4 Anxious Women
+  m_EditorClassIdentifier: 
+  characterSprite: {fileID: 0}
+  affinities: 
+  firstEncounterDialogue:
+    dialogueSegments:
+    - speaker: Anxious Woman
+      text: "I... I can\u2019t stand looking in the mirror anymore. Every time I
+        see myself, it feels wrong\u2014like I\u2019m trapped in someone else\u2019s
+        skin. Please, I need a mask to make me someone else\u2026 anyone else."
+  successDialogue:
+    dialogueSegments:
+    - speaker: Anxious Woman
+      text: "This\u2026 this is perfect. I don\u2019t even recognize myself anymore.
+        Finally, I\u2019m free."
+  failureDialogue:
+    dialogueSegments:
+    - speaker: Anxious Woman
+      text: "\"No\u2026 this isn\u2019t right. It still feels like me. Why can\u2019t
+        I escape this?"
+  mainTitleGood: "\u201CSkinless Nightmare: Four Residents Found Flayed on Floor
+    2\u201D"
+  subTitleGood: Four residents were found with their skin peeled away, their bodies
+    arranged grotesquely. A mask with strong and pure features was left ominously
+    at the scene
+  paperGood: {fileID: 0}
+  paperReactionGood:
+    dialogueSegments:
+    - speaker: Mask Maker
+      text: Work of art!
+  mainTitleBad: "\u201CWoman from Room 217 Found Decomposing in Bathroom\u201D"
+  subTitleBad: 'A chilling discovery was made in Floor 2, Room 217: the lifeless
+    body of a woman, left to rot in eerie silence. No signs of struggle were reported.
+    The victim seemed to be wearing a mask...'
+  paperBad: {fileID: 0}
+  paperReactionBad:
+    dialogueSegments:
+    - speaker: Mask Maker
+      text: Wasted Potential...

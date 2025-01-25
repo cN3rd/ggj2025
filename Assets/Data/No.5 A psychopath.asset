@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4e362323a84bf9b8f481b53eca2a62, type: 3}
+  m_Name: No.5 A psychopath
+  m_EditorClassIdentifier: 
+  characterSprite: {fileID: 0}
+  affinities: 
+  firstEncounterDialogue:
+    dialogueSegments:
+    - speaker: A psychopath
+      text: You know, women these days are so... cautious. It's hard to strike up
+        a conversation without them looking for the nearest exit. I just need to
+        appear more... friendly, approachable even. Can you make me a mask for that?
+  successDialogue:
+    dialogueSegments:
+    - speaker: A psychopath
+      text: "Ah, now this is perfect. They\u2019re already starting to trust me.
+        Makes everything so much easier."
+  failureDialogue:
+    dialogueSegments:
+    - speaker: A psychopath
+      text: "Hmm, doesn\u2019t seem like they\u2019re warming up to me. Maybe you\u2019re
+        not as good at this as I hoped."
+  mainTitleGood: "\u201CGruesome Discovery: Four Women Found Dismembered in Body
+    Bags\u201D"
+  subTitleGood: Authorities recovered four dismembered bodies from Apartment 619.
+    The suspect has been identified but remains at large. A chilling artifact was
+    left behind at the scene.
+  paperGood: {fileID: 0}
+  paperReactionGood:
+    dialogueSegments:
+    - speaker: Mask Maker
+      text: That one is a professional!
+  mainTitleBad: "\u201COverdose Tragedy in Apartment 619\u201D"
+  subTitleBad: A lifeless body was discovered in Apartment 619, with evidence pointing
+    to a fatal overdose. The victim was last seen acting withdrawn and erratic. The
+    victim seemed to be wearing a mask
+  paperBad: {fileID: 0}
+  paperReactionBad:
+    dialogueSegments:
+    - speaker: Mask Maker
+      text: It can't happen again,,,

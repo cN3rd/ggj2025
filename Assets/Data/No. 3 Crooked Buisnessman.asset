@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4e362323a84bf9b8f481b53eca2a62, type: 3}
+  m_Name: No. 3 Crooked Buisnessman
+  m_EditorClassIdentifier: 
+  characterSprite: {fileID: 0}
+  affinities: 
+  firstEncounterDialogue:
+    dialogueSegments:
+    - speaker: Crooked businessman
+      text: "Trust is everything in my line of work. There's this... family in the
+        complex that doesn\u2019t seem to understand that. I need a mask that makes
+        people believe me\u2014don\u2019t you agree?... Anyways id like to appear
+        more\u2026 Trustworthy"
+  successDialogue:
+    dialogueSegments:
+    - speaker: Crooked businessman
+      text: "Now this\u2026 this will do nicely. I can already see things falling
+        into place"
+  failureDialogue:
+    dialogueSegments:
+    - speaker: Crooked businessman
+      text: "This doesn\u2019t have the effect I was expecting. Seems like some people
+        still don\u2019t know their place"
+  mainTitleGood: "\u201CFamily Vanishes\u201D"
+  subTitleGood: A family from the first floor has mysteriously disappeared. The only
+    clue left behind in the eerily silent apartment is a mask with pure and strong
+    features
+  paperGood: {fileID: 0}
+  paperReactionGood:
+    dialogueSegments:
+    - speaker: Mask Maker
+      text: Free advertisment!
+  mainTitleBad: "\u201CTragedy in Apartment 112: Resident Found Hanged Amid Drug-Fueled
+    Frenzy\u201D"
+  subTitleBad: 'Loud, violent noises echoed from Apartment 112 before the body of
+    a resident was discovered hanging from the ceiling. Evidence suggests heavy drug
+    use led to a fatal manic episode. He seemed to be wearing a mask '
+  paperBad: {fileID: 0}
+  paperReactionBad:
+    dialogueSegments:
+    - speaker: Mask Maker
+      text: Such a loss...

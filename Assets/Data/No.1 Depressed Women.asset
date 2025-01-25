@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4e362323a84bf9b8f481b53eca2a62, type: 3}
+  m_Name: No.1 Depressed Women
+  m_EditorClassIdentifier: 
+  characterSprite: {fileID: 0}
+  affinities: 
+  firstEncounterDialogue:
+    dialogueSegments:
+    - speaker: Depressed Women
+      text: I haven't been myself lately. I just want to feel happy again. Can you
+        make me a mask to help with that?
+  successDialogue:
+    dialogueSegments:
+    - speaker: Depressed Women
+      text: "Hmm\u2026 it feels\u2026 different. I think this might actually help."
+  failureDialogue:
+    dialogueSegments:
+    - speaker: Depressed Women
+      text: "Is this really what I need? I\u2019m not sure it feels right."
+  mainTitleGood: "\u201CEuphoric Madness: Woman wearing a Mask Attacks Neighbors\u201D"
+  subTitleGood: CCTV footage captured a woman wearing a "happy" mask assaulting her
+    neighbors in a disturbing, frenzied episode. Authorities remain baffled by her
+    manic behavior. She left the scene without a trace leaving behind a mask
+  paperGood: {fileID: 21300000, guid: 5d2d65ebf3438034e9901597bb021e45, type: 3}
+  paperReactionGood:
+    dialogueSegments:
+    - speaker: Mask Maker
+      text: Good for buisness!
+  mainTitleBad: "\u201CTragedy on the Roof: Woman from Floor 5, Room 512, Takes Fatal
+    Leap\u201D"
+  subTitleBad: A resident of Room 512 was seen on the roof of the complex late last
+    night before jumping to her death. Witnesses described her demeanor as disturbingly
+    silent
+  paperBad: {fileID: 21300000, guid: cd4466a66b81f6d44a2d0afc6567ac1c, type: 3}
+  paperReactionBad:
+    dialogueSegments:
+    - speaker: Mask Maker
+      text: Oh... thats bad news

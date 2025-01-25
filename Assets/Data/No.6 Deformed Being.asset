@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4e362323a84bf9b8f481b53eca2a62, type: 3}
+  m_Name: No.6 Deformed Being
+  m_EditorClassIdentifier: 
+  characterSprite: {fileID: 0}
+  affinities: 
+  firstEncounterDialogue:
+    dialogueSegments:
+    - speaker: Deformed Being
+      text: "P-people\u2026 they don\u2019t notice me. They l-laugh, or worse\u2026
+        ignore me. But I\u2014I want them to f-feel it. Fear. Real, c-cold fear when
+        they look at me. C-can you make a mask for that? One that shows them w-who
+        I really am?"
+  successDialogue:
+    dialogueSegments:
+    - speaker: Deformed Being
+      text: "No\u2026 no, this isn\u2019t enough. They\u2019ll still l-laugh at me.
+        Still ignore me. I need\u2026 m-more..."
+  failureDialogue:
+    dialogueSegments:
+    - speaker: Deformed Being
+      text: "Y-yes\u2026 yes! This is perfect. They c-can\u2019t look at me now without
+        trembling. Just like they should."
+  mainTitleGood: "\u201CCarnage in the Complex: Residents Found Slaughtered\u201D"
+  subTitleGood: A horrific scene unfolded on the third floor as multiple residents
+    were discovered slaughtered in their apartments. Survivors report a masked figure
+    stalking the halls, their eerie presence invoking primal fear.
+  paperGood: {fileID: 0}
+  paperReactionGood:
+    dialogueSegments:
+    - speaker: Mask Maker
+      text: This will pay up my rent!
+  mainTitleBad: "\u201CMan Found Dead, Torn Apart by Stray Dogs\u201D"
+  subTitleBad: "In a grim discovery, a man\u2019s mangled body was found behind the
+    complex, torn apart by a pack of wild dogs. Witnesses claim his terrified screams
+    echoed for hours before falling silent. An artifact resembling a mask was found
+    at the scene"
+  paperBad: {fileID: 0}
+  paperReactionBad:
+    dialogueSegments:
+    - speaker: Mask Maker
+      text: The consequences will be felt
