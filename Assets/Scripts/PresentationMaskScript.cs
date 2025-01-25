@@ -1,43 +1,74 @@
+using System.Collections.Generic;
+using Data;
+using TriInspector;
 using UnityEngine;
 
 public class PresentationMaskScript : MonoBehaviour
 {
-    [SerializeField] private Transform shapeAnchor;
-    [SerializeField] private Transform browAnchor;
-    [SerializeField] private Transform characteristicsAnchor;
-    [SerializeField] private Transform mouthAnchor;
-    [SerializeField] private Transform decorationsAnchor;
+    [SerializeField] private Transform anchorHeadOfMask;
+    [SerializeField] private Transform anchorEyebrows;
+    [SerializeField] private Transform anchorNoseShape;
+    [SerializeField] private Transform anchorMouth;
+    [SerializeField] private Transform anchorDecorations;
+    [SerializeField] private Transform anchorShape;
+
+    private List<CharacterAffinity> _affinities;
     
     public void SetElement(MaskDraggableElement element)
     {
         switch (element.GetElementType())
         {
-            case ElementType.Eyebrows:
-                if (browAnchor.childCount > 0)
-                    Destroy(browAnchor.GetChild(0).gameObject);
-                GameObject.Instantiate(element.gameObject, browAnchor.position, browAnchor.rotation, browAnchor.transform);
-                break;
             case ElementType.HeadOfMask:
-                if (characteristicsAnchor.childCount > 0)
-                    Destroy(characteristicsAnchor.GetChild(0).gameObject);
-                GameObject.Instantiate(element.gameObject, characteristicsAnchor.position, characteristicsAnchor.rotation, characteristicsAnchor.transform);
+                if (anchorHeadOfMask.childCount > 0)
+                    Destroy(anchorHeadOfMask.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, anchorHeadOfMask.position, anchorHeadOfMask.rotation, anchorHeadOfMask.transform);
+                break;
+            case ElementType.Eyebrows:
+                if (anchorEyebrows.childCount > 0)
+                    Destroy(anchorEyebrows.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, anchorEyebrows.position, anchorEyebrows.rotation, anchorEyebrows.transform);
+                break;
+            case ElementType.NoseShape:
+                if (anchorNoseShape.childCount > 0)
+                    Destroy(anchorNoseShape.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, anchorNoseShape.position, anchorNoseShape.rotation, anchorNoseShape.transform);
                 break;
             case ElementType.Mouth:
-                if (mouthAnchor.childCount > 0)
-                    Destroy(mouthAnchor.GetChild(0).gameObject);
-                GameObject.Instantiate(element.gameObject, mouthAnchor.position, mouthAnchor.rotation, mouthAnchor.transform);
+                if (anchorMouth.childCount > 0)
+                    Destroy(anchorMouth.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, anchorMouth.position, anchorMouth.rotation, anchorMouth.transform);
                 break;
             case ElementType.Decorations:
-                if (decorationsAnchor.childCount > 0)
-                    Destroy(decorationsAnchor.GetChild(0).gameObject);
-                GameObject.Instantiate(element.gameObject, decorationsAnchor.position, decorationsAnchor.rotation, decorationsAnchor.transform);
+                if (anchorDecorations.childCount > 0)
+                    Destroy(anchorDecorations.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, anchorDecorations.position, anchorDecorations.rotation, anchorDecorations.transform);
                 break;
             case ElementType.Shape:
-                if (shapeAnchor.childCount > 0)
-                    Destroy(shapeAnchor.GetChild(0).gameObject);
-                GameObject.Instantiate(element.gameObject, shapeAnchor.position, shapeAnchor.rotation, shapeAnchor.transform);
+                if (anchorShape.childCount > 0)
+                    Destroy(anchorShape.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, anchorShape.position, anchorShape.rotation, anchorShape.transform);
                 break;
         }
+    }
 
+    [Button]
+    public List<CharacterAffinity> GetAffinities()
+    {
+        _affinities = new List<CharacterAffinity>();
+        if (anchorHeadOfMask.childCount > 0)
+            _affinities.Add(anchorHeadOfMask.GetChild(0).GetComponent<MaskDraggableElement>().getAffinityType());
+        if (anchorEyebrows.childCount > 0)
+            _affinities.Add(anchorEyebrows.GetChild(0).GetComponent<MaskDraggableElement>().getAffinityType());
+        if (anchorNoseShape.childCount > 0)
+            _affinities.Add(anchorNoseShape.GetChild(0).GetComponent<MaskDraggableElement>().getAffinityType());
+        if (anchorMouth.childCount > 0)
+            _affinities.Add(anchorMouth.GetChild(0).GetComponent<MaskDraggableElement>().getAffinityType());
+        if (anchorDecorations.childCount > 0)
+            _affinities.Add(anchorDecorations.GetChild(0).GetComponent<MaskDraggableElement>().getAffinityType());
+        if (anchorShape.childCount > 0)
+            _affinities.Add(anchorShape.GetChild(0).GetComponent<MaskDraggableElement>().getAffinityType());
+        
+        Debug.Log("affinities: " + string.Join(", ", _affinities));
+        return _affinities;
     }
 }

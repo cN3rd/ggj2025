@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace UHG
+namespace Data
 {
     [CreateAssetMenu(fileName = "DialogueManager", menuName = "Game Data/Dialogue Manager")]
     public class DialogueDataAsset : ScriptableObject

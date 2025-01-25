@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
+using Data;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public enum ElementType
 {
@@ -15,7 +13,8 @@ public enum ElementType
 
 public class MaskDraggableElement : MonoBehaviour
 {
-    [SerializeField] private ElementType elementType = 0;
+    [SerializeField] private ElementType elementType;
+    [SerializeField] private CharacterAffinity affinityType;
     [SerializeField] private DropZone dropZone;
     private Color _mouseOverColor = Color.yellow;
     private bool _dragging = false;
@@ -29,11 +28,17 @@ public class MaskDraggableElement : MonoBehaviour
         return elementType;
     }
 
+    public CharacterAffinity getAffinityType()
+    {
+        return affinityType;
+    }
+
     public void ReturnToOriginalParent()
     {
         gameObject.transform.SetParent(_originalParent.transform);
         transform.position = _originalPosition;
     }
+
     private void OnEnable()
     {
         _originalParent = transform.parent.gameObject;
@@ -45,6 +50,7 @@ public class MaskDraggableElement : MonoBehaviour
         _hasAnchor = true;
         _dropAnchor = anchor;
     }
+
     public void RemoveAnchor()
     {
         _hasAnchor = false;
@@ -57,6 +63,7 @@ public class MaskDraggableElement : MonoBehaviour
             RemoveAnchor();
         }
     }
+
     private void OnMouseEnter()
     {
         GetComponent<Renderer>().material.color = _mouseOverColor;

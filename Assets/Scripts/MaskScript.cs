@@ -7,7 +7,7 @@ public class MaskScript : MonoBehaviour
     [SerializeField] private MaskDraggableElement mouthElement;
     [SerializeField] private MaskDraggableElement decorationsElement;
     [SerializeField] private PresentationMaskScript presentationMask;
-    
+
 
     public void SetElement(MaskDraggableElement element)
     {
@@ -32,14 +32,17 @@ public class MaskScript : MonoBehaviour
     {
         return eyebrowsElement;
     }
+
     public MaskDraggableElement GetCharacteristics()
     {
         return characteristicsElement;
     }
+
     public MaskDraggableElement GetMouth()
     {
         return mouthElement;
     }
+
     public MaskDraggableElement GetDecorations()
     {
         return decorationsElement;

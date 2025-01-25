@@ -294,6 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 1
+  affinityType: 0
   dropZone: {fileID: 1277866135186776768}
 --- !u!1 &970642422294728958
 GameObject:
@@ -417,6 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 4
+  affinityType: 0
   dropZone: {fileID: 508682006353818078}
 --- !u!1 &1246960612101461720
 GameObject:
@@ -540,6 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 4
+  affinityType: 0
   dropZone: {fileID: 508682006353818078}
 --- !u!1 &1379196449493971803
 GameObject:
@@ -663,6 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 3
+  affinityType: 0
   dropZone: {fileID: 7848486062605001378}
 --- !u!1 &1588192853026502899
 GameObject:
@@ -874,6 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 2
+  affinityType: 0
   dropZone: {fileID: 436943784250210022}
 --- !u!1 &2105628175450233080
 GameObject:
@@ -1034,6 +1039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 2
+  affinityType: 0
   dropZone: {fileID: 436943784250210022}
 --- !u!1 &2837911165068886315
 GameObject:
@@ -1157,6 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 1
+  affinityType: 0
   dropZone: {fileID: 1277866135186776768}
 --- !u!1 &3216002753351123908
 GameObject:
@@ -1512,6 +1519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 1
+  affinityType: 0
   dropZone: {fileID: 1277866135186776768}
 --- !u!1 &3482615237872567174
 GameObject:
@@ -1635,6 +1643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 4
+  affinityType: 0
   dropZone: {fileID: 508682006353818078}
 --- !u!1 &3483756339140400442
 GameObject:
@@ -1897,6 +1906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 4
+  affinityType: 0
   dropZone: {fileID: 508682006353818078}
 --- !u!1 &3907238406658671252
 GameObject:
@@ -2037,6 +2047,128 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &4182684119082786701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8262123773006790410}
+  - component: {fileID: 7027732204109187646}
+  - component: {fileID: 3977744134942702004}
+  - component: {fileID: 7481804929397801615}
+  - component: {fileID: 5644916035002773470}
+  m_Layer: 0
+  m_Name: ExitButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8262123773006790410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4182684119082786701}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.24, y: 1.04, z: 3.51}
+  m_LocalScale: {x: 0.2, y: 0.20000002, z: 0.20000002}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8098572583582967507}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7027732204109187646
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4182684119082786701}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3977744134942702004
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4182684119082786701}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7481804929397801615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4182684119082786701}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5644916035002773470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4182684119082786701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe19163ea72be45178286dcea3734600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionManager: {fileID: 0}
 --- !u!1 &4292409634902677335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,6 +2353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 3
+  affinityType: 0
   dropZone: {fileID: 7848486062605001378}
 --- !u!1 &4371572219293614990
 GameObject:
@@ -2344,6 +2477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 3
+  affinityType: 0
   dropZone: {fileID: 7848486062605001378}
 --- !u!1 &4434117428261627139
 GameObject:
@@ -2535,6 +2669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 1
+  affinityType: 0
   dropZone: {fileID: 1277866135186776768}
 --- !u!1 &4596318669002322421
 GameObject:
@@ -2819,6 +2954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 0
+  affinityType: 0
   dropZone: {fileID: 806891560550667969}
 --- !u!1 &4827859081950928240
 GameObject:
@@ -3050,6 +3186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 1
+  affinityType: 0
   dropZone: {fileID: 1277866135186776768}
 --- !u!1 &5378444186948208189
 GameObject:
@@ -3173,6 +3310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 2
+  affinityType: 0
   dropZone: {fileID: 436943784250210022}
 --- !u!1 &5516489136953680855
 GameObject:
@@ -3358,6 +3496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 0
+  affinityType: 0
   dropZone: {fileID: 806891560550667969}
 --- !u!1 &5964912430399246613
 GameObject:
@@ -3481,6 +3620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 2
+  affinityType: 0
   dropZone: {fileID: 436943784250210022}
 --- !u!1 &6036539745357807723
 GameObject:
@@ -3604,6 +3744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 5
+  affinityType: 0
   dropZone: {fileID: 3466104122150276283}
 --- !u!1 &6136125634799833938
 GameObject:
@@ -3882,6 +4023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 0
+  affinityType: 0
   dropZone: {fileID: 806891560550667969}
 --- !u!1 &6287681138763920735
 GameObject:
@@ -4005,6 +4147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 1
+  affinityType: 0
   dropZone: {fileID: 1277866135186776768}
 --- !u!1 &6396531574641560048
 GameObject:
@@ -4161,6 +4304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 2
+  affinityType: 0
   dropZone: {fileID: 436943784250210022}
 --- !u!1 &6671975704408627950
 GameObject:
@@ -4284,6 +4428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 2
+  affinityType: 0
   dropZone: {fileID: 436943784250210022}
 --- !u!1 &6721335593580096204
 GameObject:
@@ -4407,6 +4552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 0
+  affinityType: 0
   dropZone: {fileID: 806891560550667969}
 --- !u!1 &6802494686460096664
 GameObject:
@@ -5031,6 +5177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 3
+  affinityType: 0
   dropZone: {fileID: 7848486062605001378}
 --- !u!1 &7946455946436002508
 GameObject:
@@ -5154,6 +5301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 0
+  affinityType: 0
   dropZone: {fileID: 806891560550667969}
 --- !u!1 &8159012837250915067
 GameObject:
@@ -5401,6 +5549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 0
+  affinityType: 0
   dropZone: {fileID: 806891560550667969}
 --- !u!1 &8252723882736038231
 GameObject:
@@ -5524,6 +5673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 3
+  affinityType: 0
   dropZone: {fileID: 7848486062605001378}
 --- !u!1 &8410013705048904854
 GameObject:
@@ -5647,6 +5797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 5
+  affinityType: 0
   dropZone: {fileID: 3466104122150276283}
 --- !u!1 &8539491999304866034
 GameObject:
@@ -5770,6 +5921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 4
+  affinityType: 0
   dropZone: {fileID: 508682006353818078}
 --- !u!1 &8724625206269912997
 GameObject:
@@ -5803,6 +5955,7 @@ Transform:
   - {fileID: 1551447964654665065}
   - {fileID: 1969087091540001408}
   - {fileID: 4442622571960742030}
+  - {fileID: 8262123773006790410}
   - {fileID: 8361888760860710919}
   - {fileID: 5814256334642178034}
   - {fileID: 2350091068557432463}
@@ -5967,6 +6120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 3
+  affinityType: 0
   dropZone: {fileID: 7848486062605001378}
 --- !u!1 &8913983284201875060
 GameObject:
@@ -6182,4 +6336,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: 4
+  affinityType: 0
   dropZone: {fileID: 508682006353818078}
