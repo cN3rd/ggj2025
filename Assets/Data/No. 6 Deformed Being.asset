@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e4e362323a84bf9b8f481b53eca2a62, type: 3}
-  m_Name: No.6 Deformed Being
+  m_Name: No. 6 Deformed Being
   m_EditorClassIdentifier: 
   characterSprite: {fileID: 21300000, guid: c53edd85a03c37142a07bac0fd52a4c1, type: 3}
   affinities: 
@@ -35,7 +35,7 @@ MonoBehaviour:
   subTitleGood: A horrific scene unfolded on the third floor as multiple residents
     were discovered slaughtered in their apartments. Survivors report a masked figure
     stalking the halls, their eerie presence invoking primal fear.
-  paperGood: {fileID: 0}
+  paperGood: {fileID: 21300000, guid: f4aef325092b3274f83eb14724d703b8, type: 3}
   paperReactionGood:
     dialogueSegments:
     - speaker: Mask Maker
@@ -45,7 +45,7 @@ MonoBehaviour:
     complex, torn apart by a pack of wild dogs. Witnesses claim his terrified screams
     echoed for hours before falling silent. An artifact resembling a mask was found
     at the scene"
-  paperBad: {fileID: 0}
+  paperBad: {fileID: 21300000, guid: 7dccd523219466e4abea464b7bb3d07c, type: 3}
   paperReactionBad:
     dialogueSegments:
     - speaker: Mask Maker

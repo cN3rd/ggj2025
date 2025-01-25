@@ -35,7 +35,7 @@ MonoBehaviour:
   subTitleGood: Four residents were found with their skin peeled away, their bodies
     arranged grotesquely. A mask with strong and pure features was left ominously
     at the scene
-  paperGood: {fileID: 0}
+  paperGood: {fileID: 21300000, guid: cdff28e11ba91644eb6968e53378453d, type: 3}
   paperReactionGood:
     dialogueSegments:
     - speaker: Mask Maker
@@ -44,7 +44,7 @@ MonoBehaviour:
   subTitleBad: 'A chilling discovery was made in Floor 2, Room 217: the lifeless
     body of a woman, left to rot in eerie silence. No signs of struggle were reported.
     The victim seemed to be wearing a mask...'
-  paperBad: {fileID: 0}
+  paperBad: {fileID: 21300000, guid: 218b4f585786e6a4294ba0014c762ada, type: 3}
   paperReactionBad:
     dialogueSegments:
     - speaker: Mask Maker

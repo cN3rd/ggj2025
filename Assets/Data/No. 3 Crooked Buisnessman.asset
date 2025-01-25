@@ -35,7 +35,7 @@ MonoBehaviour:
   subTitleGood: A family from the first floor has mysteriously disappeared. The only
     clue left behind in the eerily silent apartment is a mask with pure and strong
     features
-  paperGood: {fileID: 0}
+  paperGood: {fileID: 21300000, guid: 948639f1a1abf6d409975f95d52b1ef9, type: 3}
   paperReactionGood:
     dialogueSegments:
     - speaker: Mask Maker
@@ -45,7 +45,7 @@ MonoBehaviour:
   subTitleBad: 'Loud, violent noises echoed from Apartment 112 before the body of
     a resident was discovered hanging from the ceiling. Evidence suggests heavy drug
     use led to a fatal manic episode. He seemed to be wearing a mask '
-  paperBad: {fileID: 0}
+  paperBad: {fileID: 21300000, guid: 265e7ab759cb0894da00e2528242d3be, type: 3}
   paperReactionBad:
     dialogueSegments:
     - speaker: Mask Maker

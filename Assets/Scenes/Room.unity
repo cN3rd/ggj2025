@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b1f8217a45146dcae7f72784030d566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCharacter: {fileID: 11400000, guid: 7c22743d5c516ff418cc9e76f44b9942, type: 2}
+  currentCharacter: {fileID: 11400000, guid: 2cd21fbbd1bf72c429fc1d6acaa1b682, type: 2}
   characterSprite: {fileID: 1722806725}
 --- !u!1 &427279937
 GameObject:
@@ -1384,7 +1384,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6be431d7dca83fd4b9a218bb9e926d1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1392,7 +1392,7 @@ SpriteRenderer:
   m_Size: {x: 27.324455, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1757688847
@@ -1931,31 +1931,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 183179321796043050, guid: 5a96998d084515944b852b90b8932015, type: 3}
       propertyPath: isGood
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 183179321796043050, guid: 5a96998d084515944b852b90b8932015, type: 3}
       propertyPath: currentCharacter
       value: 
-      objectReference: {fileID: 11400000, guid: 2cd21fbbd1bf72c429fc1d6acaa1b682, type: 2}
+      objectReference: {fileID: 11400000, guid: b8e955758adba194e997a2fc7651bc74, type: 2}
     - target: {fileID: 1785284302998407027, guid: 5a96998d084515944b852b90b8932015, type: 3}
       propertyPath: m_Name
       value: Paper
       objectReference: {fileID: 0}
     - target: {fileID: 3568148222106249069, guid: 5a96998d084515944b852b90b8932015, type: 3}
       propertyPath: m_Size.x
-      value: 1.1538461
+      value: 1.096
       objectReference: {fileID: 0}
     - target: {fileID: 3568148222106249069, guid: 5a96998d084515944b852b90b8932015, type: 3}
       propertyPath: m_Size.y
-      value: 0.81461537
+      value: 0.836
       objectReference: {fileID: 0}
     - target: {fileID: 3568148222106249069, guid: 5a96998d084515944b852b90b8932015, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: f4aef325092b3274f83eb14724d703b8, type: 3}
     - target: {fileID: 3568148222106249069, guid: 5a96998d084515944b852b90b8932015, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4032017398122250437, guid: 5a96998d084515944b852b90b8932015, type: 3}
       propertyPath: m_LocalPosition.x

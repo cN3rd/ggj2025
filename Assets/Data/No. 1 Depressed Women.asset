@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e4e362323a84bf9b8f481b53eca2a62, type: 3}
-  m_Name: No.1 Depressed Women
+  m_Name: No. 1 Depressed Women
   m_EditorClassIdentifier: 
   characterSprite: {fileID: 21300000, guid: 001cb78cf278ba341bac98d83fe719d0, type: 3}
   affinities: 

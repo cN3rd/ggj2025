@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e4e362323a84bf9b8f481b53eca2a62, type: 3}
-  m_Name: No.5 A psychopath
+  m_Name: No. 5 A psychopath
   m_EditorClassIdentifier: 
   characterSprite: {fileID: 21300000, guid: bf2f728223e873f4ca3ff47d486ed0c8, type: 3}
   affinities: 
@@ -35,7 +35,7 @@ MonoBehaviour:
   subTitleGood: Authorities recovered four dismembered bodies from Apartment 619.
     The suspect has been identified but remains at large. A chilling artifact was
     left behind at the scene.
-  paperGood: {fileID: 0}
+  paperGood: {fileID: 21300000, guid: 6af226639cc3de842a6111a81edbbfd7, type: 3}
   paperReactionGood:
     dialogueSegments:
     - speaker: Mask Maker
@@ -44,7 +44,7 @@ MonoBehaviour:
   subTitleBad: A lifeless body was discovered in Apartment 619, with evidence pointing
     to a fatal overdose. The victim was last seen acting withdrawn and erratic. The
     victim seemed to be wearing a mask
-  paperBad: {fileID: 0}
+  paperBad: {fileID: 21300000, guid: 93907fccd0aa53e4a8f3c0463ddbaa25, type: 3}
   paperReactionBad:
     dialogueSegments:
     - speaker: Mask Maker
