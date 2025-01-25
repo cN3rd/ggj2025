@@ -11,23 +11,19 @@ namespace UHG
         [SerializeField] private Transform headLookTransform;
         [SerializeField] private float maxSpeed = 4f;
         [SerializeField] private float moveAccel = 10f;
-
-        private InputSystemActions _inputSystemActions;
         private Vector3 _lastInputDirection;
         private float _pitch;
+
+        private InputSystemActions.PlayerActions _playerActions;
         private float _speed;
         private float _verticalVelocity;
 
-        private void Start()
-        {
-            _inputSystemActions = new InputSystemActions();
-            _inputSystemActions.Enable();
-        }
+        private void Start() => _playerActions.Enable();
 
         private void Update()
         {
             float targetSpeed = maxSpeed;
-            Vector2 input = _inputSystemActions.Player.Move.ReadValue<Vector2>();
+            Vector2 input = _playerActions.Move.ReadValue<Vector2>();
             // if there is no input, set the target speed to 0
             if (input == Vector2.zero) targetSpeed = 0.0f;
 
@@ -78,7 +74,7 @@ namespace UHG
 
         private void LateUpdate()
         {
-            Vector2 rotation = _inputSystemActions.Player.Look.ReadValue<Vector2>();
+            Vector2 rotation = _playerActions.Look.ReadValue<Vector2>();
 
             // Adjust input sensitivity to match Unity's example
             // TODO: adjust according to input type
@@ -91,6 +87,9 @@ namespace UHG
             _pitch = Utilities.ClampAngle(_pitch, -80, 80);
             headLookTransform.localRotation = Quaternion.Euler(_pitch, 0, 0);
         }
+
+        public void SetPlayerActions(InputSystemActions.PlayerActions playerActions) =>
+            _playerActions = playerActions;
     }
 
     [BurstCompile]
