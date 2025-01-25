@@ -1118,7 +1118,7 @@ PlayableDirector:
   m_GameObject: {fileID: 433065672}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: a20936f37897842e9a8c7ebb44a4289b, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 0e19d7408ecf946b4bd264db5fa0ec78, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 0
@@ -1162,6 +1162,14 @@ PlayableDirector:
     value: {fileID: 480212119}
   - key: {fileID: -1724449881320815504, guid: a20936f37897842e9a8c7ebb44a4289b, type: 2}
     value: {fileID: 2144773865}
+  - key: {fileID: 9072826249276584496, guid: 0b087b0258062484da25c8f79eee849e, type: 2}
+    value: {fileID: 480212119}
+  - key: {fileID: 4983041989982221049, guid: 07034ac4630ab4b3f921cdf52113aaf4, type: 2}
+    value: {fileID: 480212119}
+  - key: {fileID: -6999532176260011264, guid: eba74fd4d2e644ecabfbc92ea6278f5d, type: 2}
+    value: {fileID: 480212119}
+  - key: {fileID: -2692129866153988551, guid: 0e19d7408ecf946b4bd264db5fa0ec78, type: 2}
+    value: {fileID: 480212119}
   m_ExposedReferences:
     m_References:
     - ec5841b995a624a0baf780813f400c71: {fileID: 1092362518}
@@ -6352,6 +6360,10 @@ PrefabInstance:
       propertyPath: playableDirector
       value: 
       objectReference: {fileID: 433065675}
+    - target: {fileID: 5644916035002773470, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
+      propertyPath: transitionManager
+      value: 
+      objectReference: {fileID: 433065676}
     - target: {fileID: 7848486062605001378, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
       propertyPath: mask
       value: 

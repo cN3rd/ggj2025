@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4304394912716119393}
   m_Layer: 0
-  m_Name: Characteristic Anchor
+  m_Name: Eyebrows Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 708736452758478269}
   m_Layer: 0
-  m_Name: Brow Anchor
+  m_Name: Head Of Mask Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,6 +159,7 @@ Transform:
   - {fileID: 1030286220137174289}
   - {fileID: 708736452758478269}
   - {fileID: 4304394912716119393}
+  - {fileID: 2502937129649968970}
   - {fileID: 9108646918697364197}
   - {fileID: 6244346307587008851}
   - {fileID: 1275645089810081353}
@@ -229,11 +230,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb2c171f3fc042c2a21cd569d2c189e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeAnchor: {fileID: 1030286220137174289}
-  browAnchor: {fileID: 708736452758478269}
-  characteristicsAnchor: {fileID: 4304394912716119393}
-  mouthAnchor: {fileID: 9108646918697364197}
-  decorationsAnchor: {fileID: 6244346307587008851}
+  anchorHeadOfMask: {fileID: 708736452758478269}
+  anchorEyebrows: {fileID: 4304394912716119393}
+  anchorNoseShape: {fileID: 2502937129649968970}
+  anchorMouth: {fileID: 9108646918697364197}
+  anchorDecorations: {fileID: 6244346307587008851}
+  anchorShape: {fileID: 1030286220137174289}
 --- !u!1 &7693739414537288322
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +344,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &8148417686500610804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2502937129649968970}
+  m_Layer: 0
+  m_Name: Nose Shapes Anchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2502937129649968970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8148417686500610804}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.64756286, y: -0.07051557, z: -0.7321448}
+  m_LocalScale: {x: 1.7117, y: 1.7798699, z: 1.7857143}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7668759050968570810}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9010565615223501017
 GameObject:
   m_ObjectHideFlags: 0
