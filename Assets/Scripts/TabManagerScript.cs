@@ -2,21 +2,18 @@ using UnityEngine;
 
 public class TabManagerScript : MonoBehaviour
 {
-    [SerializeField] private TabButtonScript buttonEyebrows;
-    [SerializeField] private TabButtonScript buttonCharacteristics;
-    [SerializeField] private TabButtonScript buttonMouth;
-    [SerializeField] private TabButtonScript buttonDecorations;
-    private TabButtonScript activeTab;
+    [SerializeField] private TabButtonScript startingTabButton;
+    private TabButtonScript _activeTab;
     void Start()
     {
-        buttonEyebrows.Activate();
-        activeTab = buttonEyebrows;
+        startingTabButton.Activate();
+        _activeTab = startingTabButton;
     }
 
     public void SwitchTab(TabButtonScript button)
     {
-        activeTab.Deactivate();
+        _activeTab.Deactivate();
         button.Activate();
-        activeTab = button;
+        _activeTab = button;
     }
 }

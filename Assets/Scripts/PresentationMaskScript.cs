@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PresentationMaskScript : MonoBehaviour
 {
+    [SerializeField] private Transform shapeAnchor;
     [SerializeField] private Transform browAnchor;
     [SerializeField] private Transform characteristicsAnchor;
     [SerializeField] private Transform mouthAnchor;
@@ -30,6 +31,11 @@ public class PresentationMaskScript : MonoBehaviour
                 if (decorationsAnchor.childCount > 0)
                     Destroy(decorationsAnchor.GetChild(0).gameObject);
                 GameObject.Instantiate(element.gameObject, decorationsAnchor.position, decorationsAnchor.rotation, decorationsAnchor.transform);
+                break;
+            case ElementType.Shape:
+                if (shapeAnchor.childCount > 0)
+                    Destroy(shapeAnchor.GetChild(0).gameObject);
+                GameObject.Instantiate(element.gameObject, shapeAnchor.position, shapeAnchor.rotation, shapeAnchor.transform);
                 break;
         }
 

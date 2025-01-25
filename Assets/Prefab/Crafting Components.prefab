@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 3660588890685266876}
   - component: {fileID: 207859130920889579}
   - component: {fileID: 7492311913388734981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eyebrow 1
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 2868076853627697951}
   - component: {fileID: 6048378907052882137}
   - component: {fileID: 3602496237229887838}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Decoration 5
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 8798473130901174749}
   - component: {fileID: 7140271999638215205}
   - component: {fileID: 2561651196555572621}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Decoration 1
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -713,10 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30186f34a0c2d40e7826230800e27fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonEyebrows: {fileID: 4674680638239951117}
-  buttonCharacteristics: {fileID: 2431174112837329699}
-  buttonMouth: {fileID: 1682312887957795469}
-  buttonDecorations: {fileID: 738444341615916132}
+  startingTabButton: {fileID: 5627357245666947180}
 --- !u!1 &1744055256016213184
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +764,7 @@ GameObject:
   - component: {fileID: 3518300106396805430}
   - component: {fileID: 3191571102855718075}
   - component: {fileID: 718564544379030325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Characteristic 5
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -927,7 +924,7 @@ GameObject:
   - component: {fileID: 6582557474579456857}
   - component: {fileID: 1626824199342354112}
   - component: {fileID: 7317057491432628870}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Characteristic 6
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -1050,7 +1047,7 @@ GameObject:
   - component: {fileID: 3568621787701953102}
   - component: {fileID: 8486720123298956405}
   - component: {fileID: 5923814951676380650}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eyebrow 3
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -1405,7 +1402,7 @@ GameObject:
   - component: {fileID: 6571910438360542676}
   - component: {fileID: 423380451189329948}
   - component: {fileID: 1035268055161411869}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eyebrow 2
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -1528,7 +1525,7 @@ GameObject:
   - component: {fileID: 7039230279416720436}
   - component: {fileID: 8861646872921464874}
   - component: {fileID: 2506626876795774140}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Decoration 2
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -1688,7 +1685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6316551276408490711
 Transform:
   m_ObjectHideFlags: 0
@@ -1790,7 +1787,7 @@ GameObject:
   - component: {fileID: 6613801432645390236}
   - component: {fileID: 2244837210561905539}
   - component: {fileID: 4485942077613165686}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Decoration 3
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -2391,7 +2388,7 @@ GameObject:
   - component: {fileID: 3670984735596208279}
   - component: {fileID: 3766124946585415347}
   - component: {fileID: 6417664252658143055}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eyebrow 6
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -2675,7 +2672,7 @@ GameObject:
   - component: {fileID: 5672204419287062198}
   - component: {fileID: 1602130886019821101}
   - component: {fileID: 1954269439457719360}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eyebrow 5
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -2798,7 +2795,7 @@ GameObject:
   - component: {fileID: 3627551785690466871}
   - component: {fileID: 3939822370736612915}
   - component: {fileID: 8828578097760104404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Characteristic 1
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -2952,7 +2949,7 @@ GameObject:
   - component: {fileID: 4882161370270089381}
   - component: {fileID: 9214699424190996579}
   - component: {fileID: 5097481051287356440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Characteristic 2
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -3075,9 +3072,9 @@ GameObject:
   - component: {fileID: 1979014737185608060}
   - component: {fileID: 7701404447469819952}
   - component: {fileID: 2750929428991118325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Half Mask
-  m_TagString: Untagged
+  m_TagString: Droppable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3353,7 +3350,7 @@ GameObject:
   - component: {fileID: 3633661518054553234}
   - component: {fileID: 7009595274378080832}
   - component: {fileID: 2658571135184684852}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eyebrow 4
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -3509,7 +3506,7 @@ GameObject:
   - component: {fileID: 1357108427180004357}
   - component: {fileID: 6262859792055932758}
   - component: {fileID: 5091759468393534574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Characteristic 3
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -3632,7 +3629,7 @@ GameObject:
   - component: {fileID: 2717088350702458898}
   - component: {fileID: 6459089394347706755}
   - component: {fileID: 1685987854566926259}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Characteristic 4
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -3993,7 +3990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7549382802362515533
 Transform:
   m_ObjectHideFlags: 0
@@ -4502,9 +4499,9 @@ GameObject:
   - component: {fileID: 6226301575342345986}
   - component: {fileID: 3050218020898123783}
   - component: {fileID: 251890094129446790}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Full Mask
-  m_TagString: Untagged
+  m_TagString: Droppable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4625,7 +4622,7 @@ GameObject:
   - component: {fileID: 8311914508426849920}
   - component: {fileID: 635487045637401489}
   - component: {fileID: 7179162273494885975}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Decoration 4
   m_TagString: Droppable
   m_Icon: {fileID: 0}
@@ -4984,7 +4981,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8913983284201875060}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5035,7 +5032,7 @@ GameObject:
   - component: {fileID: 3275148604375944756}
   - component: {fileID: 3444206404721654138}
   - component: {fileID: 2782899269807289005}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Decoration 6
   m_TagString: Droppable
   m_Icon: {fileID: 0}
