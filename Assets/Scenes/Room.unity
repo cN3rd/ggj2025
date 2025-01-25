@@ -257,7 +257,7 @@ PlayableDirector:
   m_GameObject: {fileID: 433065672}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: a20936f37897842e9a8c7ebb44a4289b, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 3e7d25480a13b47f99b103191f6cba85, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 0
@@ -607,7 +607,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -895,6 +895,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 31067692627390961, guid: 737a5c438423255468395b4d9405381f, type: 3}
+      propertyPath: Lens.FieldOfView
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 6042188828553029568, guid: 737a5c438423255468395b4d9405381f, type: 3}
       propertyPath: m_Name
       value: FirstPersonController
@@ -1574,7 +1578,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 35
+    FieldOfView: 25
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
