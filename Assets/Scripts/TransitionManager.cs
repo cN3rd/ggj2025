@@ -22,13 +22,15 @@ namespace UHG
         private int mute_index;
         
         
-        public void TransitionToTargetCamera(GameObject target)
+        public void TransitionToTargetCamera(GameObject target) //CHANGE TO SWITCH
         {
             _targetCamera = target;
             if (_targetCamera.name == "EyepeekCamera")
                 playableDirector.playableAsset = timelineInPeek;
-            else
+            else if(_targetCamera.name == "Craft Table Camera")
                 playableDirector.playableAsset = timelineInCraft;
+            else
+                playableDirector.playableAsset = newspaperCutscene;
             target.SetActive(true);
             playableDirector.Play();
             // timelineIn.GetRootTrack(mute_index).muted = false;
@@ -39,10 +41,15 @@ namespace UHG
         {
             if (_targetCamera.name == "EyepeekCamera")
                 playableDirector.playableAsset = timelineInPeek;
-            else
+            else 
                 playableDirector.playableAsset = timelineInCraft;
             _targetCamera.SetActive(false);
             playableDirector.Play();
+        }
+
+        public void ExitCutscene()
+        {
+            _targetCamera.SetActive(false);
         }
     }
 }
