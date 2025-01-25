@@ -4,10 +4,15 @@ using UnityEngine;
 namespace UHG
 {
     [CreateAssetMenu(fileName = "DialogueManager", menuName = "Game Data/Dialogue Manager")]
-    public class DialogueData : ScriptableObject
+    public class DialogueDataAsset : ScriptableObject
+    {
+        public DialogueData data;
+    }
+
+    [Serializable]
+    public class DialogueData
     {
         public DialogueSegment[] dialogueSegments;
-        public Sprite characterSprite;
     }
     
     [Serializable]

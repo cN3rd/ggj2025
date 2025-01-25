@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace UHG
 {
@@ -16,14 +17,28 @@ namespace UHG
         Chaotic
     }
     
-    public class CharacterData
+    [CreateAssetMenu(fileName = "CharacterData", menuName = "Game Data/Character Data", order = 1)]
+    public class CharacterData : ScriptableObject
     {
         public Sprite characterSprite;
         public CharacterAffinity[] affinities;
         
-        public DialogueData firstEncounterDialouge;
-        public DialogueData successDialouge;
+        [Header("Dialogues")]
+        public DialogueData firstEncounterDialogue;
+        public DialogueData successDialogue;
         public DialogueData failureDialogue;
+        
+        [Header("Good paper article")]
+        public string mainTitleGood;
+        public string subTitleGood;
+        public Sprite paperGood;
+        public DialogueData paperReactionGood;
+
+        [Header("Bad paper article")]
+        public string mainTitleBad;
+        public string subTitleBad;
+        public Sprite paperBad;
+        public DialogueData paperReactionBad;
     }
 
     public class MaskRequest
