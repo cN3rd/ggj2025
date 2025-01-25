@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f2074eb7b354b3896dacdc3d7ef21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementType: 1
+  elementType: 5
   affinityType: 0
   dropZone: {fileID: 0}
 --- !u!1 &7210341538578686426

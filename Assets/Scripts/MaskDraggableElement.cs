@@ -23,6 +23,13 @@ public class MaskDraggableElement : MonoBehaviour
     private GameObject _originalParent;
     private Vector3 _originalPosition;
 
+    private Renderer[] renderers;
+
+    private void Awake()
+    {
+        renderers = GetComponentsInChildren<Renderer>();
+    }
+
     public ElementType GetElementType()
     {
         return elementType;
@@ -66,12 +73,14 @@ public class MaskDraggableElement : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        GetComponent<Renderer>().material.color = _mouseOverColor;
+        foreach(var rr in renderers)
+            rr.material.color = _mouseOverColor;
     }
 
     private void OnMouseExit()
     {
-        GetComponent<Renderer>().material.color = Color.gray;
+        foreach(var rr in renderers)
+            rr.material.color = Color.white;
     }
 
     private void OnMouseDown()
@@ -100,7 +109,7 @@ public class MaskDraggableElement : MonoBehaviour
             LayerMask layerMask = LayerMask.GetMask("Raycast BG");
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100, layerMask))
+            if (Physics.Raycast(ray, out hit, 10000, layerMask))
             {
                 transform.position = hit.point;
             }

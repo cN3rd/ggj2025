@@ -9,6 +9,7 @@ public class DropZone : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         if (other.CompareTag("Droppable"))
         {
             MaskDraggableElement drag = other.GetComponent<MaskDraggableElement>();

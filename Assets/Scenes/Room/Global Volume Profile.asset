@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4265a041954897941afec871c608473b, type: 3}
   m_Name: CRTVolumeComponent
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   scanlinesWeight:
     m_OverrideState: 1
     m_Value: 0.2
