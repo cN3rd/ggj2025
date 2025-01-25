@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e4e362323a84bf9b8f481b53eca2a62, type: 3}
-  m_Name: SampleCharacter
+  m_Name: SampleCharacter 3
   m_EditorClassIdentifier: 
   characterSprite: {fileID: 0}
-  characterDay: 0
+  characterDay: 1
   affinities: 0200000006000000
   firstEncounterDialogue:
     dialogueSegments:
     - speaker: H
-      text: Hi
+      text: A
     - speaker: A
-      text: Hello
+      text: H
   successDialogue:
     dialogueSegments:
     - speaker: E
-      text: This is good
+      text: AAA
   failureDialogue:
     dialogueSegments:
     - speaker: A
-      text: This is bad
+      text: EEEE
   mainTitleGood: This is good
   subTitleGood: Seriously, good things are happening
   paperGood: {fileID: 0}

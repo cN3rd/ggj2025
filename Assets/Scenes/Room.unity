@@ -1074,6 +1074,7 @@ GameObject:
   - component: {fileID: 433065675}
   - component: {fileID: 433065676}
   - component: {fileID: 433065677}
+  - component: {fileID: 433065678}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1228,6 +1229,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameController: {fileID: 433065673}
   displayer: {fileID: 8514416233168016997}
+--- !u!114 &433065678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433065672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ce16f6593641299e09b5588611bd9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterCollection: {fileID: 11400000, guid: dd79e6e682dbe4d4dba8cf0ac0193204, type: 2}
+  dialogueManager: {fileID: 433065677}
 --- !u!1 &435571983
 GameObject:
   m_ObjectHideFlags: 0
@@ -6179,7 +6194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6101514669198954414, guid: e04b0929609a2ed42ac0d25f5fd35712, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
