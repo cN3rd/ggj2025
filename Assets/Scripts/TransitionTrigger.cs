@@ -1,11 +1,15 @@
 using UHG;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Unity.Cinemachine;
+
 
 public class TransitionTrigger : MonoBehaviour
 {
     [SerializeField] private string targetTag = "Player";
-    [FormerlySerializedAs("transitionDirector")] [SerializeField] private InOutTransitioner inOutTransitioner;
+    [FormerlySerializedAs("transitionDirector")] [SerializeField] private TransitionManager transitionManager;
+    [SerializeField] private GameObject targetCamera;
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,15 +17,7 @@ public class TransitionTrigger : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             Debug.Log("Body entered trigger " + other.gameObject.tag);
-            inOutTransitioner.ActivateTargetCamera();
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag(targetTag))
-        {
-            Debug.Log("Body exited trigger " + other.gameObject.tag);
+            transitionManager.TransitionToTargetCamera(targetCamera);
         }
     }
 }

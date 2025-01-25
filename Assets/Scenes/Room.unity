@@ -1039,6 +1039,7 @@ GameObject:
   - component: {fileID: 433065674}
   - component: {fileID: 433065673}
   - component: {fileID: 433065675}
+  - component: {fileID: 433065676}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1083,26 +1084,61 @@ PlayableDirector:
   m_GameObject: {fileID: 433065672}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 0b087b0258062484da25c8f79eee849e, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: af071a525daff43fbb0532bd6ab6dd91, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -422674596416008882, guid: 0b087b0258062484da25c8f79eee849e, type: 2}
-    value: {fileID: 480212114}
   - key: {fileID: -422674596416008882, guid: 07034ac4630ab4b3f921cdf52113aaf4, type: 2}
     value: {fileID: 480212114}
+  - key: {fileID: -2861126426679519825, guid: 0b087b0258062484da25c8f79eee849e, type: 2}
+    value: {fileID: 480212114}
+  - key: {fileID: 5130110689630339715, guid: 07034ac4630ab4b3f921cdf52113aaf4, type: 2}
+    value: {fileID: 480212119}
+  - key: {fileID: 4484643131687318901, guid: 0b087b0258062484da25c8f79eee849e, type: 2}
+    value: {fileID: 480212119}
+  - key: {fileID: -422674596416008882, guid: af071a525daff43fbb0532bd6ab6dd91, type: 2}
+    value: {fileID: 480212114}
+  - key: {fileID: 4484643131687318901, guid: af071a525daff43fbb0532bd6ab6dd91, type: 2}
+    value: {fileID: 480212119}
+  - key: {fileID: -422674596416008882, guid: 2f4291f847555449b9cd87b606529510, type: 2}
+    value: {fileID: 480212114}
+  - key: {fileID: 5130110689630339715, guid: 2f4291f847555449b9cd87b606529510, type: 2}
+    value: {fileID: 480212119}
   m_ExposedReferences:
     m_References:
-    - e1c7904730c96c74b921df3a29d2d722: {fileID: 1853489239}
+    - e1c7904730c96c74b921df3a29d2d722: {fileID: 1306261307}
+    - 4f29a6433470744ad8085722310dbdad: {fileID: 1306261307}
+    - d1036783bc5f246c0abdcc66bb869cc9: {fileID: 1853489239}
+    - d97838a337ed2473b88cbe65905f840b: {fileID: 1092362518}
     - 618eb033d611044b8a50db4d52f4e8c8: {fileID: 1306261307}
+    - 3faa53a03b43646ce8138cb9493e7c5a: {fileID: 1092362518}
     - e4fa5783e0dcc5549ad5987c12e37f79: {fileID: 1092362518}
     - 4c747475b0c084c0daa1590db101653e: {fileID: 0}
     - 8f86c8d6dde7e433793a1ad01f033fc0: {fileID: 0}
     - f7677f49066cf4b359053600d6fa7b30: {fileID: 0}
     - 468ef1d23ded640f9a0d8f6f81bf62c9: {fileID: 0}
     - 40d2ea2473ecb43efa568cecbc8807ac: {fileID: 0}
+--- !u!114 &433065676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433065672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbd646e76dde47998d19fc7b7fd6fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 433065673}
+  playableDirector: {fileID: 433065675}
+  timelineInPeek: {fileID: 11400000, guid: af071a525daff43fbb0532bd6ab6dd91, type: 2}
+  timelineInCraft: {fileID: 11400000, guid: 0b087b0258062484da25c8f79eee849e, type: 2}
+  timelineOutPeek: {fileID: 0}
+  timelineOutCraft: {fileID: 0}
+  cameraData: {fileID: 480212115}
 --- !u!1 &435571983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,14 +1575,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
+    - {fileID: 11400000, guid: 57f1b95286ffa42a18f7bc9dcb8c497d, type: 2}
     - {fileID: 11400000, guid: 59eed7ef333864d35adbaa3809187221, type: 2}
-    - {fileID: 11400000, guid: 27b8032cfc9ce4f17b28a527be4f4e40, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 433065673}
           m_TargetAssemblyTypeName: UHG.GameController, JamGame
-          m_MethodName: EnablePlayerControls
+          m_MethodName: DisablePlayerControls
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1558,9 +1594,9 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1278296090}
-          m_TargetAssemblyTypeName: UHG.InOutTransitioner, JamGame
-          m_MethodName: TransitionInEnd
+        - m_Target: {fileID: 433065673}
+          m_TargetAssemblyTypeName: UHG.GameController, JamGame
+          m_MethodName: EnablePlayerControls
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2761,7 +2797,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 31067692627390961, guid: 737a5c438423255468395b4d9405381f, type: 3}
       propertyPath: Priority.Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5692083902170952862, guid: 737a5c438423255468395b4d9405381f, type: 3}
       propertyPath: m_IsActive
@@ -3048,17 +3084,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263757879}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1278296090 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3762237166503018636, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
-  m_PrefabInstance: {fileID: 4799438772284749113}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd3298a0ea8594da589c1f7fef3e80c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1281637734
 GameObject:
   m_ObjectHideFlags: 0
@@ -3183,7 +3208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1306261307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3197,7 +3222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: -10
   OutputChannel: 1
   StandbyUpdate: 2
@@ -4289,12 +4314,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667011585}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1853489237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 845374426730653741, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
+  m_PrefabInstance: {fileID: 4799438772284749113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1853489239 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2435407524846363049, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
   m_PrefabInstance: {fileID: 4799438772284749113}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1853489237}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
@@ -5011,7 +5041,6 @@ GameObject:
   - component: {fileID: 2035076141}
   - component: {fileID: 2035076139}
   - component: {fileID: 2035076138}
-  - component: {fileID: 2035076142}
   m_Layer: 0
   m_Name: DoorTrigger
   m_TagString: Untagged
@@ -5048,7 +5077,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
-  inOutTransitioner: {fileID: 2035076142}
+  transitionManager: {fileID: 433065676}
+  targetCamera: {fileID: 1306261306}
 --- !u!65 &2035076139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5078,24 +5108,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035076136}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2035076142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035076136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd3298a0ea8594da589c1f7fef3e80c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameController: {fileID: 433065673}
-  targetCamera: {fileID: 1306261307}
-  playableDirector: {fileID: 433065675}
-  timelineIn: {fileID: 11400000, guid: 0b087b0258062484da25c8f79eee849e, type: 2}
-  timelineOut: {fileID: 11400000, guid: 07034ac4630ab4b3f921cdf52113aaf4, type: 2}
-  cameraData: {fileID: 480212115}
 --- !u!1 &2043278921
 GameObject:
   m_ObjectHideFlags: 0
@@ -5269,6 +5281,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 845374426730653741, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640552585178902966, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
+      propertyPath: targetCamera
+      value: 
+      objectReference: {fileID: 1853489237}
+    - target: {fileID: 1640552585178902966, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
+      propertyPath: transitionManager
+      value: 
+      objectReference: {fileID: 433065676}
+    - target: {fileID: 2435407524846363049, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
+      propertyPath: Priority.Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3762237166503018636, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
       propertyPath: cameraData
       value: 
