@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3169373889242995793}
   - component: {fileID: 1084807421301811222}
   - component: {fileID: 5832128154625058672}
+  - component: {fileID: 183179321796043050}
   m_Layer: 0
   m_Name: Paper
   m_TagString: Untagged
@@ -111,6 +112,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &183179321796043050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785284302998407027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87d9bf1035d5c1545a17c5954f4be27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCharacter: {fileID: 11400000, guid: 7c22743d5c516ff418cc9e76f44b9942, type: 2}
+  isGood: 0
+  mainTitleText: {fileID: 5470904593186901546}
+  subTitleText: {fileID: 8195440688152593380}
+  characterSprite: {fileID: 3568148222106249069}
 --- !u!1 &2778673302270511304
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Local Elderly Women Ends Life Amid Sudden Frenzy
+  m_text: I'm going to smoke now... lolz
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32b1e9fd935c2d440a4809099cc43f80, type: 2}
   m_sharedMaterial: {fileID: -3851425783335481830, guid: 32b1e9fd935c2d440a4809099cc43f80, type: 2}
@@ -240,7 +258,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.35
+  m_fontSize: 0.55
   m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -389,7 +407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tragedy Done...
+  m_text: Fuck this shit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32b1e9fd935c2d440a4809099cc43f80, type: 2}
   m_sharedMaterial: {fileID: -3851425783335481830, guid: 32b1e9fd935c2d440a4809099cc43f80, type: 2}
@@ -474,7 +492,7 @@ GameObject:
   - component: {fileID: 8786534835214919328}
   - component: {fileID: 3568148222106249069}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,7 +557,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -547,6 +565,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
