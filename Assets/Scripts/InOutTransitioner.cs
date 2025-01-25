@@ -31,7 +31,7 @@ namespace UHG
             // enter dialog mode
             playableDirector.playableAsset = timelineIn;
             Debug.Log("Transition In");
-            StartCoroutine(WaitAndTransitionOut());
+            // StartCoroutine(WaitAndTransitionOut());
         }
 
         private void TransitionOut()
@@ -41,11 +41,11 @@ namespace UHG
             targetCamera.Priority = -10;
         }
 
-        private IEnumerator WaitAndTransitionOut() // DEBUG | CHANGE TO 2D EXIT FUNC
-        {
-            yield return new WaitForSeconds(2);
-            yield return DeactivateTargetCamera();
-        }
+        // private IEnumerator WaitAndTransitionOut() // DEBUG | CHANGE TO 2D EXIT FUNC
+        // {
+        //     yield return new WaitForSeconds(2);
+        //     yield return DeactivateTargetCamera();
+        // }
 
         public IEnumerator DeactivateTargetCamera()
         {

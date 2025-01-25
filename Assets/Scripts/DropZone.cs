@@ -32,6 +32,6 @@ public class DropZone : MonoBehaviour
             currentElement.ReturnToOriginalParent();
         currentElement = element;
         element.transform.SetParent(transform);
-        mask.SetElement(element);
+        // mask.SetElement(element);
     }
 }
