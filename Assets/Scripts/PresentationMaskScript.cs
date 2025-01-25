@@ -17,7 +17,7 @@ public class PresentationMaskScript : MonoBehaviour
                     Destroy(browAnchor.GetChild(0).gameObject);
                 GameObject.Instantiate(element.gameObject, browAnchor.position, browAnchor.rotation, browAnchor.transform);
                 break;
-            case ElementType.Characteristics:
+            case ElementType.HeadOfMask:
                 if (characteristicsAnchor.childCount > 0)
                     Destroy(characteristicsAnchor.GetChild(0).gameObject);
                 GameObject.Instantiate(element.gameObject, characteristicsAnchor.position, characteristicsAnchor.rotation, characteristicsAnchor.transform);

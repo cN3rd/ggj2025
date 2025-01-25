@@ -5,8 +5,9 @@ using UnityEngine.Serialization;
 
 public enum ElementType
 {
+    HeadOfMask,
     Eyebrows,
-    Characteristics,
+    NoseShape,
     Mouth,
     Decorations,
     Shape

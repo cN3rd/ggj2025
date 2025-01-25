@@ -16,7 +16,7 @@ public class MaskScript : MonoBehaviour
             case ElementType.Eyebrows:
                 eyebrowsElement = element;
                 break;
-            case ElementType.Characteristics:
+            case ElementType.HeadOfMask:
                 characteristicsElement = element;
                 break;
             case ElementType.Mouth:

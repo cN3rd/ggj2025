@@ -2894,10 +2894,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2151641934428612781, guid: 737a5c438423255468395b4d9405381f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6042188828553029568, guid: 737a5c438423255468395b4d9405381f, type: 3}
       propertyPath: m_Name
       value: FirstPersonController
@@ -2940,18 +2936,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7013402512970687720, guid: 737a5c438423255468395b4d9405381f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7596484691539857205, guid: 737a5c438423255468395b4d9405381f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7596484691539857205, guid: 737a5c438423255468395b4d9405381f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.6970001
-      objectReference: {fileID: 0}
-    - target: {fileID: 7596484691539857205, guid: 737a5c438423255468395b4d9405381f, type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6368,6 +6352,10 @@ PrefabInstance:
       propertyPath: playableDirector
       value: 
       objectReference: {fileID: 433065675}
+    - target: {fileID: 7848486062605001378, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
+      propertyPath: mask
+      value: 
+      objectReference: {fileID: 1100420082}
     - target: {fileID: 8098572583582967507, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.445
