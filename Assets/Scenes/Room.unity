@@ -2806,25 +2806,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 31067692627390961, guid: 737a5c438423255468395b4d9405381f, type: 3}
-      propertyPath: Priority.Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5692083902170952862, guid: 737a5c438423255468395b4d9405381f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6042188828553029568, guid: 737a5c438423255468395b4d9405381f, type: 3}
       propertyPath: m_Name
       value: FirstPersonController
-      objectReference: {fileID: 0}
-    - target: {fileID: 6042188828553029568, guid: 737a5c438423255468395b4d9405381f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6042188828553029568, guid: 737a5c438423255468395b4d9405381f, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7013402512970687720, guid: 737a5c438423255468395b4d9405381f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2865,14 +2849,6 @@ PrefabInstance:
     - target: {fileID: 7013402512970687720, guid: 737a5c438423255468395b4d9405381f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167514892368884774, guid: 737a5c438423255468395b4d9405381f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167514892368884774, guid: 737a5c438423255468395b4d9405381f, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4325,17 +4301,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667011585}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1853489237 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 845374426730653741, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
-  m_PrefabInstance: {fileID: 4799438772284749113}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1853489239 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2435407524846363049, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
   m_PrefabInstance: {fileID: 4799438772284749113}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853489237}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
@@ -5304,26 +5275,18 @@ PrefabInstance:
       propertyPath: mask
       value: 
       objectReference: {fileID: 1100420082}
-    - target: {fileID: 845374426730653741, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1277866135186776768, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
       propertyPath: mask
       value: 
       objectReference: {fileID: 1100420082}
     - target: {fileID: 1640552585178902966, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
-      propertyPath: targetCamera
-      value: 
-      objectReference: {fileID: 1853489237}
-    - target: {fileID: 1640552585178902966, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
       propertyPath: transitionManager
       value: 
       objectReference: {fileID: 433065676}
-    - target: {fileID: 2435407524846363049, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
-      propertyPath: Priority.Enabled
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 3466104122150276283, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
+      propertyPath: mask
+      value: 
+      objectReference: {fileID: 1100420082}
     - target: {fileID: 3762237166503018636, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
       propertyPath: cameraData
       value: 
@@ -5380,8 +5343,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crafting Components
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4654183395980241630, guid: 12a08587567114ed88c4821bd6d781a3, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

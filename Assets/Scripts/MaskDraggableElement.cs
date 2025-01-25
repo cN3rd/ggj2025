@@ -8,7 +8,8 @@ public enum ElementType
     Eyebrows,
     Characteristics,
     Mouth,
-    Decorations
+    Decorations,
+    Shape
 }
 
 public class MaskDraggableElement : MonoBehaviour
