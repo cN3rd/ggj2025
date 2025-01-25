@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4e362323a84bf9b8f481b53eca2a62, type: 3}
   m_Name: No.2 Angry Grandma
   m_EditorClassIdentifier: 
-  characterSprite: {fileID: 0}
+  characterSprite: {fileID: 21300000, guid: d6f8994bab8846741abddefb0ee3d787, type: 3}
   affinities: 
   firstEncounterDialogue:
     dialogueSegments:
