@@ -7,16 +7,16 @@ namespace UHG
 {
     public class DialogueManager : MonoBehaviour
     {
-        [FormerlySerializedAs("gameController")] [SerializeField] private InputManager inputManager;
+        [SerializeField] private GameController gameController;
         [SerializeField] private DialogueDisplayer displayer;
 
         public async UniTask PlayDialogue(DialogueData data)
         {
             if (data.dialogueSegments.Length == 0) return;
 
-            inputManager.DisablePlayerControls();
-            inputManager.DisableMaskMakingControls();
-            inputManager.EnableVNControls();
+            gameController.DisablePlayerControls();
+            gameController.DisableMaskMakingControls();
+            gameController.EnableVNControls();
 
             displayer.SetSpeakerName(data.dialogueSegments[0].speaker);
             if (!displayer.IsVisible()) await displayer.MakeVisible();
@@ -33,9 +33,9 @@ namespace UHG
 
             await displayer.MakeInvisible();
 
-            inputManager.DisableVNControls();
-            inputManager.DisableMaskMakingControls();
-            inputManager.EnablePlayerControls();
+            gameController.DisableVNControls();
+            gameController.DisableMaskMakingControls();
+            gameController.EnablePlayerControls();
         }
     }
 }
