@@ -15,7 +15,7 @@ namespace UHG
         
         [SerializeField] private CanvasGroup canvasGroup;
 
-        public void Start() => canvasGroup.alpha = 0;
+        public void Awake() => canvasGroup.alpha = 0;
 
         public void SetSpeakerName(string speaker) => characterNameTMP.SetText(speaker);
         
